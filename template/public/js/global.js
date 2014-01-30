@@ -26,5 +26,6 @@ jours = new Array('Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi',
 date = jours[jour]+' <span>'+j+'</span> '+mois[moi];
 $('.leftContent time').html(date);
 
+console.log($('ul li:nth-child(1)').text());
 
 });
