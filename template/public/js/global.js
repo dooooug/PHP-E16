@@ -16,16 +16,21 @@ function resizeContent() {
 */
 
 /* DATE */
-date = new Date;
-moi = date.getMonth();
-mois = new Array('Janvier', 'F&eacute;vrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Ao&ucirc;t', 'Septembre', 'Octobre', 'Novembre', 'D&eacute;cembre');
-j = date.getDate();
-jour = date.getDay();
-jours = new Array('Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi');
+var date  = new Date;
+var moi   = date.getMonth();
+var mois  = new Array('Janvier', 'F&eacute;vrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Ao&ucirc;t', 'Septembre', 'Octobre', 'Novembre', 'D&eacute;cembre');
+var j     = date.getDate();
+var jour  = date.getDay();
+var jours = new Array('Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi');
+var date  = jours[jour]+' <span>'+j+'</span> '+mois[moi];
 
-date = jours[jour]+' <span>'+j+'</span> '+mois[moi];
 $('.leftContent time').html(date);
 
-console.log($('ul li:nth-child(1)').text());
+/* DAY ACTIVE */
+var day = jours[jour].toLowerCase();
+$('.' + day).addClass('selected');
+
+
+
 
 });
