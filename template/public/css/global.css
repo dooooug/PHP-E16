@@ -10,14 +10,13 @@ body {
 	height: 100%;
 }
 
-/* LEFT NAV */
+/* LEFT CONTENT */
 
 .leftContent {
 	position: fixed;
 	left: 0;
 	height: 100%;
 	width: 20%;
-	min-width: 200px;
 	text-align: center;
 	background: #1c1c1c;
 	box-shadow: inset -15px 0px 15px -10px rgba(0,0,0,0.8);
@@ -92,7 +91,7 @@ footer small {
 .rightContent {
 	float: right;
 	text-align: center;
-	height: 100%;
+	min-height: 100%;
 	width: 80%;
 	background: url('../img/background.png') no-repeat center fixed;
 	background-size: cover;
@@ -180,10 +179,12 @@ footer small {
 		bottom: 5px;
 	}
 	
+/* SELECTED DAY */
+	
 .selected {
 	position: relative
 }
-	
+
 	.selected:after {
 		position: absolute;
 		bottom: 0;
@@ -193,5 +194,28 @@ footer small {
 		border-right: 10px solid transparent;
 		border-top: 10px solid #fff;
 	}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1045px) {
+
+	.leftContent {
+		width: 6%;
+		min-width: 60px;
+	}
+	
+	.rightContent {
+		width: 94%;
+	}
+	
+	header h1, header h2, header a, .leftContent time {
+		display: none;
+	}
+	
+	header {
+		border: none;
+	}
+	
+}
 	
 	
