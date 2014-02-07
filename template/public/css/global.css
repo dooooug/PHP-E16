@@ -15,7 +15,7 @@ body {
 .leftContent {
 	position: fixed;
 	left: 0;
-	height: 100%;
+	min-height: 100%;
 	width: 20%;
 	text-align: center;
 	background: #1c1c1c;

@@ -30,7 +30,9 @@ $('.leftContent time').html(date);
 var day = jours[jour].toLowerCase();
 $('.' + day).addClass('selected');
 
-
+$('html, body').animate({
+	scrollTop: $('.' + day).offset().top
+}, 1000);
 
 
 });
