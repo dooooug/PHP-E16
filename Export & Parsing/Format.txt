@@ -1,0 +1,260 @@
+Array
+(
+    [1] => Array
+        (
+            [A] => 
+            [B] => 
+            [C] => 
+            [D] => 
+            [E] => 
+            [F] => 
+            [G] => 
+            [H] => 
+            [I] => 
+            [J] => 
+            [K] => 
+            [L] => 
+            [M] => 
+            [N] => 
+            [O] => H3 P2016
+            [P] => 
+            [Q] => 
+            [R] => 
+        )
+
+    [2] => Array
+        (
+            [A] => 
+            [B] => 
+            [C] => 
+            [D] => 
+            [E] => 
+            [F] => 
+            [G] => 
+            [H] => 
+            [I] => 
+            [J] => 
+            [K] => 
+            [L] => 
+            [M] => 
+            [N] => 
+            [O] => 
+            [P] => 
+            [Q] => 
+            [R] => 
+        )
+
+    [3] => Array
+        (
+            [A] => 
+            [B] => 
+            [C] => 
+            [D] => 
+            [E] => 
+            [F] => 
+            [G] => 
+            [H] => 
+            [I] => 
+            [J] => 
+            [K] => 
+            [L] => 
+            [M] => 
+            [N] => 
+            [O] => 
+            [P] => 
+            [Q] => 
+            [R] => 
+        )
+
+    [4] => Array
+        (
+            [A] => SEMAINE 16 / 36
+Du 20 au 24 janvier 2014
+            [B] => 
+            [C] => 
+            [D] => 
+            [E] => 
+            [F] => MATIN
+            [G] => 
+            [H] => 
+            [I] => 
+            [J] => 
+            [K] => 
+            [L] => 
+            [M] => APRES-MIDI
+            [N] => 
+            [O] => 
+            [P] => 
+            [Q] => 
+            [R] => 
+        )
+
+    [5] => Array
+        (
+            [A] => Lundi
+            [B] => 20
+            [C] => janv
+            [D] => 2014
+            [E] => COURS
+            [F] => Anglais (G2A/G1A)
+            [G] => S. BACKERS
+            [H] => S5
+S10
+            [I] => G1
+G2
+            [J] => 09h00-11h00
+11h00-13h00
+            [K] => 
+            [L] => COURS
+            [M] => Ecriture publicitaire et web (G2B/G1B)
+            [N] => C. RODGOLD
+            [O] => S10
+S5
+            [P] => G1
+G2
+            [Q] => 14h00-16h00
+16h00-18h00
+            [R] => 
+        )
+
+    [6] => Array
+        (
+            [A] => Mardi
+            [B] => 21
+            [C] => janv
+            [D] => 2014
+            [E] => 
+            [F] => Clean design : Indispensables (G1/G2)
+Anglais (G2B/G1B)
+            [G] => J. VIALLARD
+S. BACKERS
+            [H] => S5
+S10
+            [I] => G1
+G2
+            [J] => 09h00-11h00
+11h00-13h00
+            [K] => 
+            [L] => 
+            [M] => Fondamentaux de l'internet (G1/G2)
+Ecriture publicitaire et web (G2A/G1A)
+            [N] => D. VILLA MONTEIRO
+C. RODGOLD
+            [O] => S10
+S5
+            [P] => G1
+G2
+            [Q] => 14h00-16h00
+16h00-18h00
+            [R] => 
+        )
+
+    [7] => Array
+        (
+            [A] => Mercredi
+            [B] => 22
+            [C] => janv
+            [D] => 2014
+            [E] => 
+            [F] => Marketing (G1)
+            [G] => P. CONCHOU
+            [H] => S5
+            [I] => G1
+            [J] => 09h00-13h00
+            [K] => 
+            [L] => 
+            [M] => Marketing (G2)
+            [N] => P. CONCHOU
+            [O] => S5
+            [P] => G2
+            [Q] => 14h00-18h00
+            [R] => 
+        )
+
+    [8] => Array
+        (
+            [A] => Jeudi
+            [B] => 23
+            [C] => janv
+            [D] => 2014
+            [E] => 
+            [F] => PHP MySQL (G1/G2)
+Drupal (G2/G1)
+            [G] => F. PUMIR
+E. BELLOT
+            [H] => S5
+S10
+            [I] => G1
+G2
+            [J] => 09h00-11h00
+11h00-13h00
+            [K] => 
+            [L] => 
+            [M] => PHP MySQL (G1/G2)
+Drupal (G2/G1)
+            [N] => F. PUMIR
+E. BELLOT
+            [O] => S10
+S5
+            [P] => G1
+G2
+            [Q] => 14h00-16h00
+16h00-18h00
+            [R] => 
+        )
+
+    [9] => Array
+        (
+            [A] => Vendredi
+            [B] => 24
+            [C] => janv
+            [D] => 2014
+            [E] => 
+            [F] => PHP MySQL (G1/G2)
+A la manière de (G2A/G1A)
+            [G] => F. PUMIR
+B. LIGNEL
+            [H] => S5
+S10
+            [I] => G1
+G2
+            [J] => 09h00-11h00
+11h00-13h00
+            [K] => 
+            [L] => 
+            [M] => BDD SQL (G1/G2)
+A la manière de (G2B/G1B)
+            [N] => D. SZALKOWSKI
+B. LIGNEL
+            [O] => S10
+S5
+            [P] => G1
+G2
+            [Q] => 14h00-16h00
+16h00-18h00
+            [R] => 
+        )
+
+    [10] => Array
+        (
+            [A] => 
+            [B] => 
+            [C] => 
+            [D] => 
+            [E] => 
+            [F] => 
+            [G] => 
+            [H] => 
+            [I] => 
+            [J] => 
+            [K] => 
+            [L] => 
+            [M] => 
+            [N] => 
+            [O] => 
+            [P] => 
+            [Q] => 
+            [R] => 
+        )
+
+)
