@@ -11,5 +11,8 @@ private $mapper;
  public function getUser($params){
    return $this->mapper->load(array('login=? AND password=?',$params['login'],$params['password']));
  }
+ public function getUserById($params){
+   return $this->mapper->load(array('id=?',$params['id']));
+ }
 }
 ?>

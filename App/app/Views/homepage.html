@@ -10,6 +10,25 @@
 </head>
 <body>
   <h1>HomePage</h1>
-  <p>Bravo, t'as réussi à te logger !</p>
+  <p>Bienvenue 
+    <?php if(isset($user)) :?>
+      <strong>
+        <?php echo $user->firstname.' '.$user->lastname; ?>
+      </strong>
+       de la promo 
+      <strong>
+        <?php echo $user->promo; ?>
+      </strong>
+       du groupe 
+      <strong>
+        <?php echo $user->group; ?>
+      </strong>
+       et du sous-groupe 
+      <strong>
+        <?php echo $user->subgroup; ?>
+      </strong>
+      !
+    <?php endif; ?>
+  </p>
 </body>
 </html>
