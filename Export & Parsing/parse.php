@@ -3,7 +3,7 @@
 set_include_path(get_include_path() . PATH_SEPARATOR . 'Classes/');
 include 'PHPExcel/IOFactory.php';
 
-
+$schedule = new array();
 $inputFileName = './export/id_1_part_2_H3 P2016 Semaine 16.xlsx';
 
 try {
@@ -47,4 +47,16 @@ foreach($groups as $group) {
     print_r('La promo ' . $promo . ' groupe ' . $group . ' sous-groupe '.$subgroup[$i].' aura cours de ' . $field . ' avec ' . $teacher . ' dans la salle ' . $room[$i] . ' a ' . $hour[$i] . 'h</br>');
     $i++;
 }
+
+
+/*mardi mercredi etc.*/
+
+$schedule["lundi"]["m1"]["g1"]["a"]["cours"] = $cours;
+$schedule["lundi"]["m1"]["g1"]["a"]["salle"] = $hour;
+$schedule["lundi"]["m1"]["g1"]["a"]["prof"] = $teacher;
+
+
+$newSchedule = json_encode($schedule);
+
+
 ?>
