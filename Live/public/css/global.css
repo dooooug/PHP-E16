@@ -8,6 +8,7 @@ body {
 	font: 13px 'Open Sans', Verdana, sans-serif;
 	color: #fff;
 	height: 100%;
+	background: #63b47a;
 }
 
 /* LEFT CONTENT */
@@ -194,6 +195,49 @@ footer small {
 		border-right: 10px solid transparent;
 		border-top: 10px solid #fff;
 	}
+
+/* LOGIN PAGE */
+
+form {
+	height: 200px;
+	width: 30%;
+	min-width: 300px;
+	position: absolute;
+	left: 0; right: 0; top: 0; bottom: 0;
+	margin: auto auto;
+	border-radius: 5px;
+	background: #fff; 
+	box-shadow:15px 15px 0px rgba(0,0,0,.1);
+}
+
+form input {
+	display: block;
+	margin: 20px auto;
+	padding-left: 10px;
+	height: 30px;
+	width: 90%;
+	color: #888;
+	border: none;
+	border-radius: 5px;
+	background: #dedede;
+}
+
+form input[type="submit"] {
+	font-size :1.2em;
+  	color: #fff;
+  	text-shadow: 1px 1px 0px rgba(0,0,0,.1);
+	height: 50px;
+	line-height: 50px;
+	border: none;
+  	border-radius: 5px;
+ 	background :#f26964;
+  	box-shadow: 0px 3px 0px #c1524e;
+}
+
+	form input[type="submit"]:hover {
+		margin-top: 22px;
+		box-shadow: 0px 1px 0px #c1524e;
+	} 
 
 /* MEDIA QUERIES */
 
