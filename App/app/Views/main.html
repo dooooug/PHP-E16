@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+	<title>Heti'Cal / Home</title>
+	<meta name="description" content="">
+  <base href="<?php echo $BASE; ?>/" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+  
+</head>
+<body>
+  <h1>HomePage</h1>
+  <p>Hello <?php echo $SESSION['firstname'] . " " . $SESSION['lastname'] . " de la promo " . $SESSION['promo'] . " groupe " . $SESSION['group'] . " et du sous-groupe " . $SESSION['subgroup']; ?></p>
+  <a href="signout/">Signout</a>
+</body>
+</html>
