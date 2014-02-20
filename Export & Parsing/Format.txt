@@ -205,7 +205,7 @@ G2
 
     [9] => Array
         (
-            [A] => Vendredi
+            [A] => Vendredi 
             [B] => 24
             [C] => janv
             [D] => 2014

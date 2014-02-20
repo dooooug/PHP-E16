@@ -13,38 +13,125 @@ catch(Exception $e) {
 	die('Error loading file "'.pathinfo($inputFileName,PATHINFO_BASENAME).'": '.$e->getMessage());
 }
 
-$sheetData = $objPHPExcel->getActiveSheet()->toArray(null,true,true,true);
+$datas = $objPHPExcel->getActiveSheet()->toArray(null,true,true,true);
 
-$promo = explode(" ", $sheetData[1]['O'])[0];
 
-$lundi = $sheetData[5];
-$course = split("\(",$lundi['F']);
-$field = $course[0];
-$groupsdata = split("\/",substr($course[1], 0, -1));
-$subgroup = [];
-$groups = [];
-
-foreach($groupsdata as $groupdata) {
-    array_push($subgroup, $groupdata[2]);
-    array_push($groups,$groupdata[1]);
+function multiexplode ($delimiters,$string) {
+    $ready = str_replace($delimiters, $delimiters[0], $string);
+    $launch = explode($delimiters[0], $ready);
+    return  $launch;
 }
 
-$teacher = $lundi['G'];
+$promo = array();
+$day = array();
 
-$room = explode("\n", $lundi['H']);
-$hour = explode("\n", $lundi['J']);
+// PARSE TABLE 
+for ($i=5; $i < 10; $i++) { 
+	$course = array();
+	$courses = array();
+	$morning = array();
+	$afternoon = array();
 
-for($i = 0; $i < sizeof($hour); $i++){
-    $hour[$i] = $hour[$i][0].$hour[$i][1];
+	// EXPLODE
+	$morning = multiexplode(array("(","/",")"), $datas[$i]['F']);
+	$afternoon = multiexplode(array("(","/",")"), $datas[$i]['M']);
+
+	// COURS MORNING 
+		// M1
+	$course['cours'] = trim($morning[0]);
+	$course['9h - 11h'] = $morning[1];
+	$course['11h - 13h'] = $morning[2];
+		if (empty($course['11h - 13h'])) {
+			$course['9h - 13h'] = $morning[1];
+			unset($course['9h - 11h'], $course['11h - 13h']);
+		}
+
+	$courses['m1'] = $course;	
+	$course = array();
+
+		// M2
+	$course['cours'] = trim($morning[3]);
+	$course['9h - 11h'] = $morning[4];
+	$course['11h - 13h'] = $morning[5];
+		if (empty($course['11h - 13h'])) {
+			$course['9h - 13h'] = $morning[4];
+			unset($course['9h - 11h'], $course['11h - 13h']);
+		}
+
+	if (!empty($course['cours'])) {
+		$courses['m2'] = $course;
+	}
+	$course = array();
+	
+	// COURS AFTERNOON 
+		// S1
+	$course['cours'] = trim($afternoon[0]);
+	$course['14h - 16h'] = $afternoon[1];
+	$course['16h - 18h'] = $afternoon[2];
+		if (empty($course['16h - 18h'])) {
+			$course['14h - 18h'] = $afternoon[1];
+			unset($course['14h - 16h'], $course['16h - 18h']);
+		}
+
+	$courses['s1'] = $course;		
+	$couse = array();
+
+		// S2
+	$course['cours'] = trim($afternoon[3]);
+	$course['14h - 16h'] = $afternoon[4];
+	$course['16h - 18h'] = $afternoon[5];
+		if (empty($course['16h - 18h'])) {
+			$course['14h - 18h'] = $afternoon[4];
+			unset($course['14h - 16h'], $course['16h - 18h']);
+		}
+
+	if (!empty($course['cours'])) {
+		$courses['s2'] = $course;
+	}
+	$course = array();
+
+	// PUSH IN PROMO AND DAY
+	$day[$datas[$i]['A']] = $courses;
+	$promo[$datas[1]['O']] = $day;
 }
 
-for($i = 0; $i < sizeof($room); $i++){
-    $room[$i] = substr($room[$i], 1);
-}
+// $group = multiexplode(array("(","/",")"), $datas[6]['F']);
+// $group1 = multiexplode(array("(","/",")"), $datas[6]['M']);
 
-$i = 0;
-foreach($groups as $group) {
-    print_r('La promo ' . $promo . ' groupe ' . $group . ' sous-groupe '.$subgroup[$i].' aura cours de ' . $field . ' avec ' . $teacher . ' dans la salle ' . $room[$i] . ' a ' . $hour[$i] . 'h</br>');
-    $i++;
-}
+// switch ($group[1]) {
+//     case 'G1':
+//         echo "G1";
+//         break;
+//     case 'G2':
+//         echo "G2";
+//         break;
+//     case 'G1A':
+//         echo "G1A";
+//         break;
+//     case 'G2A':
+//         echo "G2A";
+//         break;
+//     case 'G1B':
+//         echo "G1B";
+//         break;
+//     case 'G2B':
+//         echo "G2B";
+//         break;
+// }
+
+// echo "<pre>";
+// print_r($group);
+// echo "</pre>";
+
+// echo "<pre>";
+// print_r($group1);
+// echo "</pre>";
+
+
+echo "<pre>";
+print_r($promo);
+echo "</pre>";
+
+// echo json_encode($promo);
+
 ?>
