@@ -7,7 +7,7 @@ class App_controller extends Controller{
   }
   
   public function home($f3){
-    
+    $f3->set('events', $this->model->getEvents(array('promo'=>$f3->get('SESSION.promo'))));
   }
   
   public function signin($f3){
@@ -41,5 +41,17 @@ class App_controller extends Controller{
     session_destroy();
     $f3->reroute('/signin');
   }  
+  
+  public function addEvent($f3){
+    switch($f3->get('VERB')){
+      case 'GET': 
+        $this->tpl['sync']='addEvent.html';
+      break;
+      case 'POST': 
+        $this->model->addEvent();
+        $f3->set('message', 'Event added');
+      break;
+    }
+  }
 }
 ?>

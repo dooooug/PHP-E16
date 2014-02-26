@@ -17,5 +17,13 @@ private $f3;
  public function signin($params){
    return $this->mapper->load(array('login=? and password=?', $params['login'], $params['password']));
  }
+ public function getEvents($params){
+   return $this->getMapper('events')->find(array('promo=?', $params['promo']));
+ }
+ 
+ public function addEvent(){
+   $this->getMapper('events')->copyFrom('POST');
+   $this->getMapper('events')->save();
+ }
 }
 ?>

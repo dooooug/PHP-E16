@@ -12,6 +12,9 @@
 </head>
 <body>
   <h1>HomePage</h1>
+  <?php if(isset($message)): ?> 
+  <div><?php echo $message; ?></div>
+  <?php endif;?>
   <p>Hello <?php echo $SESSION['firstname'] . " " . $SESSION['lastname'] . " de la promo " . $SESSION['promo'] . " groupe " . $SESSION['group'] . " et du sous-groupe " . $SESSION['subgroup']; ?></p>
   <a href="signout/">Signout</a>
   
