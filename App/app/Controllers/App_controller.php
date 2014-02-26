@@ -41,17 +41,5 @@ class App_controller extends Controller{
     session_destroy();
     $f3->reroute('/signin');
   }  
-  
-  public function profile($f3){
-    switch($f3->get('VERB')){
-      case 'GET':
-        $this->tpl['sync']='profile.html';
-      break;
-      case 'POST':
-        $this->tpl['sync']='profile.html';
-        echo "OKLOL";
-      break;
-    }
-  }
 }
 ?>

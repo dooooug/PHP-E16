@@ -14,5 +14,18 @@
   <h1>HomePage</h1>
   <p>Hello <?php echo $SESSION['firstname'] . " " . $SESSION['lastname'] . " de la promo " . $SESSION['promo'] . " groupe " . $SESSION['group'] . " et du sous-groupe " . $SESSION['subgroup']; ?></p>
   <a href="signout/">Signout</a>
+  
+  <p><a href="event/add">Nouvel Evenement</a></p>
+  
+  <?php if(isset($events)) : 
+    foreach($events as $event) :?>
+    <p><?php echo $event->title; 
+        if($event->creator == $SESSION['id']) :?>
+        <a href="event/<?php echo $event->id;?>">Éditer</a>
+      <?php endif;?>
+    </p>
+  <?php endforeach;
+  endif;?>
+    
 </body>
 </html>
