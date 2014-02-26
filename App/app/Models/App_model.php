@@ -17,13 +17,39 @@ private $f3;
  public function signin($params){
    return $this->mapper->load(array('login=? and password=?', $params['login'], $params['password']));
  }
+ 
  public function getEvents($params){
    return $this->getMapper('events')->find(array('promo=?', $params['promo']));
  }
  
+ public function getEvent($params){
+   return $this->getMapper('events')->load(array('id=?', $params['id']));
+ }
+ 
  public function addEvent(){
-   $this->getMapper('events')->copyFrom('POST');
-   $this->getMapper('events')->save();
+   $mapper = $this->getMapper('events');
+   $mapper->reset();
+   $mapper->copyFrom('POST',function($val) {
+       return array_intersect_key($val, array_flip(array('title','description','speaker','creator','room','date','hour','promo','priority')));
+   });
+   $mapper->save();
+ }
+ 
+ public function editEvent($params){
+   $mapper = $this->getMapper('events');
+   $mapper->reset();
+   $mapper->load(array('id=?',$params['id']));
+   $mapper->copyFrom('POST',function($val) {
+       return array_intersect_key($val, array_flip(array('title','description','speaker','creator','room','date','hour','promo','priority')));
+   });
+   $mapper->update();
+ }
+ 
+ public function deleteEvent($params){
+   $mapper = $this->getMapper('events');
+   $mapper->reset();
+   $mapper->load(array('id=?',$params['id']));
+   $mapper->erase();
  }
 }
 ?>

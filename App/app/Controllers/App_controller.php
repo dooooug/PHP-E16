@@ -49,7 +49,29 @@ class App_controller extends Controller{
       break;
       case 'POST': 
         $this->model->addEvent();
-        $f3->set('message', 'Event added');
+        $f3->reroute('/');
+      break;
+    }
+  }
+  
+  public function editEvent($f3){
+    switch($f3->get('VERB')){
+      case 'GET': 
+        $f3->set('event', $this->model->getEvent(array('id'=>$f3->get('PARAMS.id'))));
+        $this->tpl['sync']='editEvent.html';
+      break;
+      case 'POST': 
+        $this->model->editEvent(array('id'=>$f3->get('PARAMS.id')));
+        $f3->reroute('/');
+      break;
+    }
+  }
+  
+  public function deleteEvent($f3){
+    switch($f3->get('VERB')){
+      case 'GET': 
+        $this->model->deleteEvent(array('id'=>$f3->get('PARAMS.id')));
+        $f3->reroute('/');
       break;
     }
   }
