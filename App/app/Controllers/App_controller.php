@@ -8,6 +8,7 @@ class App_controller extends Controller{
   
   public function home($f3){
     $f3->set('events', $this->model->getEvents(array('promo'=>$f3->get('SESSION.promo'))));
+    $f3->set('promos', $this->model->getPromos());
   }
   
   public function signin($f3){
@@ -58,6 +59,7 @@ class App_controller extends Controller{
     switch($f3->get('VERB')){
       case 'GET': 
         $f3->set('event', $this->model->getEvent(array('id'=>$f3->get('PARAMS.id'))));
+        $f3->set('promos', $this->model->getPromos());
         $this->tpl['sync']='editEvent.html';
       break;
       case 'POST': 

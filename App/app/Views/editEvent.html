@@ -18,7 +18,17 @@
       <input type="text" name="room" value="<?php echo $event->room;?>" />
       <input type="date" name="date" value="<?php echo $event->date;?>" />
       <input type="time" name="hour" value="<?php echo $event->hour;?>" />
-      <input type="text" name="promo" value="<?php echo $event->promo;?>" />
+      <select name="promo">
+        <?php if(isset($promos)) :
+          foreach($promos as $promo) : 
+            if($event->promo == $promo->name) : ?>
+              <option value="<?php echo $promo->name; ?>" selected><?php echo $promo->name; ?></option>
+            <?php else : ?>
+              <option value="<?php echo $promo->name; ?>"><?php echo $promo->name; ?></option>
+            <?php endif;?>
+          <?php endforeach;
+        endif; ?>
+      </select>
       <input type="text" name="priority" value="<?php echo $event->priority;?>" />
       <input type="submit" name="edit" value="Editer">
       <input type="submit" name="delete" value="Supprimer">

@@ -27,7 +27,13 @@
     <input type="text" name="room" placeholder="room"  />
     <input type="date" name="date" />
     <input type="time" name="hour" />
-    <input type="text" name="promo" placeholder="promo" />
+    <select name="promo">
+      <?php if(isset($promos)) :
+        foreach($promos as $promo) : ?>
+          <option value="<?php echo $promo->name; ?>"><?php echo $promo->name; ?></option>
+        <?php endforeach;
+      endif; ?>
+    </select>
     <input type="text" name="priority" placeholder="priority"  />
     <input type="submit" value="Add">
   </form>
@@ -37,14 +43,14 @@
   
   <?php if(isset($events)) : 
     foreach($events as $event) :?>
-    <p>
-    <?php echo $event->title; 
-        if($event->creator == $SESSION['id']) :?>
+      <p>
+      <?php echo $event->title; 
+      if($event->creator == $SESSION['id']) :?>
         <a href="event/<?php echo $event->id;?>">Éditer</a>
       <?php endif;?>
       <br>
       </p>
-  <?php endforeach;
+    <?php endforeach;
   endif;?>
     
 </body>

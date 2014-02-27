@@ -18,6 +18,10 @@ private $f3;
    return $this->mapper->load(array('login=? and password=?', $params['login'], $params['password']));
  }
  
+ public function getPromos(){
+   return $this->getMapper('promos')->find();
+ }
+ 
  public function getEvents($params){
    return $this->getMapper('events')->find(array('promo=?', $params['promo']));
  }
