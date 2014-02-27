@@ -35,9 +35,19 @@ $('html, body').animate({
 }, 1000);
 
 /* LEFT UL */
-$('.leftContent ul li').click(function() {
+$('.leftContent ul li:nth-child(1)').click(function() {
 	$(this).children('.toggle').slideToggle(400);
 	$(this).siblings().children('.toggle').slideUp(400);
+});
+
+$('.leftContent ul li:nth-child(3)').click(function() {
+	$(this).children('.toggle').slideToggle(400);
+	$(this).siblings().children('.toggle').slideUp(400);
+});
+
+$('.leftContent ul li:nth-child(2) a').click(function() {
+	$(this).next('.toggle').slideToggle(400);
+	return false;
 });
 
 /* WEATHER */
@@ -46,16 +56,13 @@ $.simpleWeather({
 	woeid: '',
 	unit: 'c',
 	success: function(weather) {
-	html = '<h2><i class="icon-'+weather.code+'"></i></h2>';
-
-	$("#weather").html(html);
+		html = '<h2><i class="icon-'+weather.code+'"></i></h2>';
+		$("#weather").html(html);
 	},
 
 	error: function(error) {
-	$("#weather").html('<p>'+error+'</p>');
-}
-
-
+		$("#weather").html('<p>'+error+'</p>');
+	}
 });
 
 });

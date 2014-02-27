@@ -31,64 +31,66 @@
 				<a href="#" class="settings"><h1>Christophe Lepage</h1>
 				<h2>H3 G2B</h2></a>
 		</header>
-		<ul>
-			<li>
-				<a href="#">Flux</a>
-				<div class="toggle">
-					<ul class="flux">
-						<li>
-							<h1>Christophe Lepage à créé</h1>
-							<q>« Cours du soir : Illustrator »</q>
-							<p>Jeudi 18 février, à 18h</p>
-						</li>
-						<li>
-							<h1>Johanna Pineau à créé</h1>
-							<q>« Cours du soir : Illustrator »</q>
-							<p>Jeudi 18 février, à 18h</p>
-						</li>
-						<li>
-							<h1>Hugo Leloup à créé</h1>
-							<q>« Cours du soir : Illustrator »</q>
-							<p>Jeudi 18 février, à 18h</p>
-						</li>
-						<li>
-							<h1>Christophe Lepage à créé</h1>
-							<q>« Cours du soir : Illustrator »</q>
-							<p>Jeudi 18 février, à 18h</p>
-						</li>
-					</ul>
-				</div>
-			</li>
-			<li>
-				<a href="#">Créer un événement</a>
-				<div class="toggle">
-				    <div class="event">
-				        <form method="post" action="traitement.php">
-				            <p>
-				                <input type="date" name="date" id="date"/>
-				                
-				                <input type="text" name="nameEvent" id="nameEvent" placeholder="Nom de l'événement"/>
-				                
-				                <input type="text" name="group" id="group" placeholder="Groupes"/>
-				                
-				                <input type="text" name="hourly" id="hourly" placeholder="Horaires"/>
-
-				                <input type="submit" value="+" />
-				            </p>
-				        </form>
-				    </div>
-				</div>
-			</li>
-			<li>
-				<a href="#">Synchronisation</a>
-				<div class="toggle">
-					<div class="sync">
-						<p>Tu peux garder ton planning à jour en le synchronisant automatiquement à ton calendrier Google</p>
-						<a href="#">Sign in with Google</a>
+		<nav>
+			<ul>
+				<li>
+					<a href="#">Flux</a>
+					<div class="toggle">
+						<ul class="flux">
+							<li>
+								<h1>Christophe Lepage à créé</h1>
+								<q>« Cours du soir : Illustrator »</q>
+								<p>Jeudi 18 février, à 18h</p>
+							</li>
+							<li>
+								<h1>Johanna Pineau à créé</h1>
+								<q>« Cours du soir : Illustrator »</q>
+								<p>Jeudi 18 février, à 18h</p>
+							</li>
+							<li>
+								<h1>Hugo Leloup à créé</h1>
+								<q>« Cours du soir : Illustrator »</q>
+								<p>Jeudi 18 février, à 18h</p>
+							</li>
+							<li>
+								<h1>Christophe Lepage à créé</h1>
+								<q>« Cours du soir : Illustrator »</q>
+								<p>Jeudi 18 février, à 18h</p>
+							</li>
+						</ul>
 					</div>
-				</div>
-			</li>
-		</ul>
+				</li>
+				<li>
+					<a href="#">Créer un événement</a>
+					<div class="toggle">
+					    <div class="event">
+					        <form method="post" action="traitement.php">
+					            <p>
+					                <input type="date" name="date" id="date"/>
+					                
+					                <input type="text" name="nameEvent" id="nameEvent" placeholder="Nom de l'événement"/>
+					                
+					                <input type="text" name="group" id="group" placeholder="Groupes"/>
+					                
+					                <input type="text" name="hourly" id="hourly" placeholder="Horaires"/>
+
+					                <input type="submit" value="+" />
+					            </p>
+					        </form>
+					    </div>
+					</div>
+				</li>
+				<li>
+					<a href="#">Synchronisation</a>
+					<div class="toggle">
+						<div class="sync">
+							<p>Tu peux garder ton planning à jour en le synchronisant automatiquement à ton calendrier Google</p>
+							<a href="#">Sign in with Google</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</nav>
 		<footer>
 			<div id="weather"></div>
 			<time>Dimanche 26 janvier</time>
@@ -245,7 +247,7 @@
 			<li></li>
 		</ul>
 		
-		<h2>Semaine <span>7</span></h2>
+		<h2>Semaine</h2>
 	</section>
 	
 <!-- SCRIPTS -->
