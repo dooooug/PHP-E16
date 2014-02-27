@@ -22,7 +22,7 @@ var mois  = new Array('Janvier', 'F&eacute;vrier', 'Mars', 'Avril', 'Mai', 'Juin
 var j     = date.getDate();
 var jour  = date.getDay();
 var jours = new Array('Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi');
-var date  = jours[jour]+' <span>'+j+'</span> '+mois[moi];
+var date  = jours[jour]+' '+j+' '+mois[moi];
 
 $('.leftContent time').html(date);
 
@@ -34,5 +34,10 @@ $('html, body').animate({
 	scrollTop: $('.' + day).offset().top
 }, 1000);
 
+/* LEFT UL */
+$('.leftContent ul li').click(function() {
+	$(this).children('.toggle').slideToggle(400);
+	$(this).siblings().children('.toggle').slideUp(400);
+});
 
 });

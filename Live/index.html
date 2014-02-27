@@ -21,20 +21,75 @@
 	<!-- STYLESHEETS -->  
 	<link href="public/css/reset.css" rel="stylesheet" type="text/css" /> 
 	<link href="public/css/global.css" rel="stylesheet" type="text/css" />
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
     <!-- /STYLESHEETS -->
 </head>
 <body>
 	<section class="leftContent">
 		<header>
 			<img src="public/uploads/pp.jpg" alt="pp" class="profilPic">
-				<h1>Christophe <span>Lepage</span></h1>
+				<h1>Christophe Lepage</h1>
 				<h2>H3 G2B</h2>
-				<a href="#">Profil</a>
+				<a href="#" class="settings">Profil</a>
 		</header>
-		<time>Dimanche <span>26</span> janvier</time>
+		<ul>
+			<li>
+				<a href="#">Flux</a>
+				<div class="toggle">
+					<div class="flux">
+						<h1>Christophe Lepage à créé</h1>
+						<q>« Cours du soir : Illustrator »</q>
+						<p>Jeudi 18 février, à 18h</p>
+					</div>
+					<div class="flux">
+						<h1>Johanna Pineau à créé</h1>
+						<q>« Cours du soir : Illustrator »</q>
+						<p>Jeudi 18 février, à 18h</p>
+					</div>
+					<div class="flux">
+						<h1>Hugo Leloup à créé</h1>
+						<q>« Cours du soir : Illustrator »</q>
+						<p>Jeudi 18 février, à 18h</p>
+					</div>
+					<div class="flux">
+						<h1>Christophe Lepage à créé</h1>
+						<q>« Cours du soir : Illustrator »</q>
+						<p>Jeudi 18 février, à 18h</p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<a href="#">Créer un événement</a>
+				<div class="toggle">
+				    <div class="event">
+				        <form method="post" action="traitement.php">
+				            <p>
+				                <input type="date" name="date" id="date"/>
+				                
+				                <input type="text" name="nameEvent" id="nameEvent" placeholder="Nom de l'événement"/>
+				                
+				                <input type="text" name="group" id="group" placeholder="Groupes"/>
+				                
+				                <input type="text" name="hourly" id="hourly" placeholder="Horaires"/>
+
+				                <input type="submit" value="+" />
+				            </p>
+				        </form>
+				    </div>
+				</div>
+			</li>
+			<li>
+				<a href="#">Synchronisation</a>
+				<div class="toggle">
+					<div class="sync">
+						<p>Tu peux garder ton planning à jour en le synchronisant automatiquement à ton calendrier Google</p>
+						<a href="#">Sign in with Google</a>
+					</div>
+				</div>
+			</li>
+		</ul>
 		<footer>
-			<small>Powered by HETI'CAL</small>
+			<time>Dimanche 26 janvier</time>
 		</footer>
 	</section>
 	<section class="rightContent">
@@ -44,13 +99,13 @@
 			<li></li>
 			<li></li>
 			<li class="active">
-				<div class="info">
 					<time>14h</time>
+						<div class="info">
+							<h3>Écriture publicitaire et web</h3>
+							<h4>C. Rodgold</h4>
+						</div>
 						<span class="room">10</span>
 					<time>16h</time>
-				</div>
-				<h3>Écriture publicitaire et web</h3>
-				<h4>C. Rodgold</h4>
 			</li>
 			<li></li>
 			<li></li>
@@ -58,33 +113,33 @@
 		<ul>
 			<li class="mardi">Mardi</li>
 			<li class="active">
-				<div class="info">
 					<time>9h</time>
+						<div class="info">
+							<h3>Anglais</h3>
+							<h4>S. Backers</h4>
+						</div>
 						<span class="room">5</span>
 					<time>11h</time>
-				</div>
-				<h3>Anglais</h3>
-				<h4>S. Backers</h4>
 			</li>
 			<li class="active">
-				<div class="info">
 					<time>11h</time>
+						<div class="info">
+							<h3>Clean design</h3>
+							<h4>J. Viallard</h4>
+						</div>
 						<span class="room">5</span>
 					<time>13h</time>
-				</div>
-				<h3>Clean design</h3>
-				<h4>J. Viallard</h4>
 			</li>
 			<li></li>
 			<li></li>
 			<li class="active">
-				<div class="info">
 					<time>16h</time>
+						<div class="info">
+							<h3>Fondamentaux de l'internet</h3>
+							<h4>D. Villa Monteiro</h4>
+						</div>
 						<span class="room">10</span>
 					<time>18h</time>
-				</div>
-				<h3>Fondamentaux de l'internet</h3>
-				<h4>D. Villa Monteiro</h4>
 			</li>
 			<li></li>
 		</ul>
@@ -94,63 +149,63 @@
 			<li></li>
 			<li></li>
 			<li class="active">
-				<div class="info">
 					<time>14h</time>
+						<div class="info">
+							<h3>Marketing</h3>
+							<h4>P. Conchou</h4>
+						</div>
 						<span class="room">10</span>
 					<time>16h</time>
-				</div>
-				<h3>Marketing</h3>
-				<h4>P. Conchou</h4>
 			</li>
 			<li class="active">
-				<div class="info">
 					<time>16h</time>
+						<div class="info">
+							<h3>Marketing</h3>
+							<h4>P. Conchou</h4>
+						</div>
 						<span class="room">10</span>
 					<time>18h</time>
-				</div>
-				<h3>Marketing</h3>
-				<h4>P. Conchou</h4>
 			</li>
 			<li></li>
 		</ul>
 		<ul>
 			<li class="jeudi">Jeudi</li>
 			<li class="active">
-				<div class="info">
 					<time>9h</time>
+						<div class="info">
+							<h3>Drupal</h3>
+							<h4>E. Bellot</h4>
+						</div>
 						<span class="room">5</span>
 					<time>11h</time>
-				</div>
-				<h3>Drupal</h3>
-				<h4>E. Bellot</h4>
 			</li>
 			<li class="active">
-				<div class="info">
 					<time>11h</time>
+						<div class="info">
+							<h3>PHP MySQL</h3>
+							<h4>F. Pumir</h4>
+						</div>
 						<span class="room">5</span>
 					<time>13h</time>
-				</div>
-				<h3>PHP MySQL</h3>
-				<h4>F. Pumir</h4>
 			</li>
 			<li></li>
 			<li class="active">
-				<div class="info">
 					<time>14h</time>
+						<div class="info">
+							<h3>Drupal</h3>
+							<h4>E. Bellot</h4>
+						</div>
 						<span class="room">10</span>
 					<time>16h</time>
-				</div>
-				<h3>Drupal</h3>
-				<h4>E. Bellot</h4>
 			</li>
 			<li class="active">
-				<div class="info">
 					<time>16h</time>
+						<div class="info">
+							<h3>PHP MySQL</h3>
+							<h4>F. Pumir</h4>
+						</div>
 						<span class="room">10</span>
 					<time>18h</time>
-				</div>
-				<h3>PHP MySQL</h3>
-				<h4>F. Pumir</h4>
 			</li>
 			<li></li>
 		</ul>
@@ -158,32 +213,32 @@
 			<li class="vendredi">Vendredi</li>
 			<li></li>
 			<li class="active">
-				<div class="info">
 					<time>11h</time>
+						<div class="info">
+							<h3>PHP MySQL</h3>
+							<h4>F. Pumir</h4>
+						</div>
 						<span class="room">5</span>
 					<time>13h</time>
-				</div>
-				<h3>PHP MySQL</h3>
-				<h4>F. Pumir</h4>
 			</li>
 			<li></li>
 			<li class="active">
-				<div class="info">
 					<time>14h</time>
+						<div class="info">
+							<h3>À la manière de</h3>
+							<h4>B. Lignel</h4>
+						</div>
 						<span class="room">10</span>
 					<time>16h</time>
-				</div>
-				<h3>À la manière de</h3>
-				<h4>B. Lignel</h4>
 			</li>
 			<li class="active">
-				<div class="info">
 					<time>16h</time>
+						<div class="info">
+							<h3>BDD SQL</h3>
+							<h4>D. Szalkowski</h4>
+						</div>
 						<span class="room">10</span>
 					<time>18h</time>
-				</div>
-				<h3>BDD SQL</h3>
-				<h4>D. Szalkowski</h4>
 			</li>
 			<li></li>
 		</ul>
