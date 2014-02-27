@@ -7,7 +7,8 @@ class App_controller extends Controller{
   }
   
   public function home($f3){
-    
+    $f3->set('events', $this->model->getEvents(array('promo'=>$f3->get('SESSION.promo'))));
+    $f3->set('promos', $this->model->getPromos());
   }
   
   public function signin($f3){
@@ -42,14 +43,33 @@ class App_controller extends Controller{
     $f3->reroute('/signin');
   }  
   
-  public function profile($f3){
+  public function addEvent($f3){
     switch($f3->get('VERB')){
-      case 'GET':
-        $this->tpl['sync']='profile.html';
+      case 'GET': 
+        $this->tpl['sync']='addEvent.html';
       break;
-      case 'POST':
-        $this->tpl['sync']='profile.html';
-        echo "OKLOL";
+      case 'POST': 
+        $this->model->addEvent();
+        $f3->reroute('/');
+      break;
+    }
+  }
+  
+  public function editEvent($f3){
+    switch($f3->get('VERB')){
+      case 'GET': 
+        $f3->set('event', $this->model->getEvent(array('id'=>$f3->get('PARAMS.id'))));
+        $f3->set('promos', $this->model->getPromos());
+        $this->tpl['sync']='editEvent.html';
+      break;
+      case 'POST': 
+        if($f3->get('POST.edit')){
+          $this->model->editEvent(array('id'=>$f3->get('PARAMS.id')));
+        }
+        else if($f3->get('POST.delete')){
+          $this->model->deleteEvent(array('id'=>$f3->get('PARAMS.id')));
+        }
+        $f3->reroute('/');
       break;
     }
   }

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+	<title>Heti'Cal / Sign In </title>
+	<meta name="description" content="">
+  <base href="<?php echo $BASE; ?>/" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>   
+    <form action="event/<?php echo $event->id;?>" id="editEvent" method="POST">
+      <input type="text" name="title" value="<?php echo $event->title;?>" />
+      <textarea><?php echo $event->description;?></textarea>
+      <input type="text" name="speaker" value="<?php echo $event->speaker;?>" />
+      <input type="text" name="creator" value="<?php echo $event->creator;?>" />
+      <input type="text" name="room" value="<?php echo $event->room;?>" />
+      <input type="date" name="date" value="<?php echo $event->date;?>" />
+      <input type="time" name="hour" value="<?php echo $event->hour;?>" />
+      <select name="promo">
+        <?php if(isset($promos)) :
+          foreach($promos as $promo) : 
+            if($event->promo == $promo->name) : ?>
+              <option value="<?php echo $promo->name; ?>" selected><?php echo $promo->name; ?></option>
+            <?php else : ?>
+              <option value="<?php echo $promo->name; ?>"><?php echo $promo->name; ?></option>
+            <?php endif;?>
+          <?php endforeach;
+        endif; ?>
+      </select>
+      <input type="text" name="priority" value="<?php echo $event->priority;?>" />
+      <input type="submit" name="edit" value="Editer">
+      <input type="submit" name="delete" value="Supprimer">
+    </form>
+</body>
+</html>

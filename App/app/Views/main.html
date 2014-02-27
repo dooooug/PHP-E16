@@ -12,7 +12,46 @@
 </head>
 <body>
   <h1>HomePage</h1>
+  <?php if(isset($message)): ?> 
+  <div><?php echo $message; ?></div>
+  <?php endif;?>
   <p>Hello <?php echo $SESSION['firstname'] . " " . $SESSION['lastname'] . " de la promo " . $SESSION['promo'] . " groupe " . $SESSION['group'] . " et du sous-groupe " . $SESSION['subgroup']; ?></p>
   <a href="signout/">Signout</a>
+  
+  <h2>Nouvel Évènement</h2>
+  <form action="event/add" method="POST">
+    <input type="text" name="title" placeholder="title" />
+    <textarea name="description" placeholder="description"></textarea>
+    <input type="text" name="speaker" placeholder="speaker" />
+    <input style="display:none;" type="text" name="creator" value="<?php echo $SESSION['id']; ?>" />
+    <input type="text" name="room" placeholder="room"  />
+    <input type="date" name="date" />
+    <input type="time" name="hour" />
+    <select name="promo">
+      <?php if(isset($promos)) :
+        foreach($promos as $promo) : ?>
+          <option value="<?php echo $promo->name; ?>"><?php echo $promo->name; ?></option>
+        <?php endforeach;
+      endif; ?>
+    </select>
+    <input type="text" name="priority" placeholder="priority"  />
+    <input type="submit" value="Add">
+  </form>
+  
+  
+  <h2>Évènements vous concernant</h2>
+  
+  <?php if(isset($events)) : 
+    foreach($events as $event) :?>
+      <p>
+      <?php echo $event->title; 
+      if($event->creator == $SESSION['id']) :?>
+        <a href="event/<?php echo $event->id;?>">Éditer</a>
+      <?php endif;?>
+      <br>
+      </p>
+    <?php endforeach;
+  endif;?>
+    
 </body>
 </html>
