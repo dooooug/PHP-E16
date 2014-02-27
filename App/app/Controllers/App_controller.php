@@ -7,7 +7,7 @@ class App_controller extends Controller{
   }
   
   public function home($f3){
-    $f3->set('events', $this->model->getEvents());
+    $f3->set('events', $this->model->getEvents(array('promo'=>$f3->get('SESSION.promo'))));
   }
   
   public function signin($f3){

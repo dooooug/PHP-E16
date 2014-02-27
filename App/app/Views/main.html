@@ -38,30 +38,14 @@
   <?php if(isset($events)) : 
     foreach($events as $event) :?>
     <p>
-    <?php if($SESSION['promo'] == $event->promo) : echo $event->title; 
-        if($event->creator == $SESSION['id']) :?>
-        <a href="event/<?php echo $event->id;?>">Éditer</a>
-      <?php endif;?>
-      <br>
-      </p>
-    <?php endif;?>
-  <?php endforeach;
-  endif;?>
-  
-  
-  <h2>Derniers évènements créés</h2>
-  <p>
-  <?php if(isset($events)) : 
-    $i=0;
-    foreach(array_slice($events, 0, 4) as $event) :?>
     <?php echo $event->title; 
         if($event->creator == $SESSION['id']) :?>
         <a href="event/<?php echo $event->id;?>">Éditer</a>
       <?php endif;?>
       <br>
+      </p>
   <?php endforeach;
   endif;?>
-  </p>
     
 </body>
 </html>
