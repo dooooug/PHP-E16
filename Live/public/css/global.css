@@ -105,7 +105,7 @@ header .profilPic {
 
 .leftContent h1 {
 	font-size: 1.2em;
-	padding-top: 10px;
+	padding-top: 8px;
 	font-weight: 300;
 }
 	
@@ -116,16 +116,13 @@ header .profilPic {
 }
 
 header a.settings {
-	display: block;
-	margin: -13px 0 0 130px;
-	height: 12px;
-	width: 13px;
-	font-size: 0;
-	background: url('../img/settings-icon.png');
+	display: inline-block;
+	color: #fff;
+	text-decoration: none;
 }
 
 	header a.settings:hover {
-		opacity: 0.7;
+		background: url('../img/settings-icon.png') 58px 31px no-repeat;
 	}
 
 /* LEFT UL */
@@ -139,7 +136,7 @@ header a.settings {
 
 .leftContent ul .toggle {
 	display: none;
-	padding: 10px 10px;
+	padding: 10px 10px 10px 10px;
 	background: #1a1a1a;
 	box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.3);
 	max-height: 200px;
@@ -149,6 +146,10 @@ header a.settings {
 /* FLUX */
 
 .leftContent ul .toggle .flux {
+	margin: 0;
+} 
+
+.leftContent ul .toggle .flux li {
 	font-weight: 300;
 	text-align: center;
 	background: #2a2a2a;
@@ -156,29 +157,43 @@ header a.settings {
 	line-height: 25px;
 	padding: 5px;
 	margin: 10px 0;
+	z-index: 5;
 }
 
-	.flux h1 {
+	.flux li h1 {
 		font-size: 1em;
 		padding-top: 0px;
 	}
 
+.leftContent ul li:first-child .toggle:after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: block;
+	content: '';
+	height: 50px;
+	width: 100%;
+	background: linear-gradient(to bottom, rgba(26,26,26,0.0) 0%,rgba(26,26,26,1) 100%); 
+	z-index: 15;
+}
+
 /* EVENT */
 
 .event form {
-	margin-left: 40px;
+	width: 70%;
+	margin: 0 auto;
 }
 
 .event form input {
     display: block;
-    width: 80%;
+    width: 100%;
 	color: #bfbfbf;
 	background: none;
 	border-style: none;
 	border-top: none;
 	border-left: none;
 	border-right: none;
-    margin-top: 15px;
+    margin: 15px auto 0 auto;
     padding-bottom: 3px;
 	border-bottom: 1px solid #bfbfbf;
 }
@@ -190,8 +205,7 @@ header a.settings {
 .event form input[type="submit"] { 
 	font-weight: 700;
 	font-size: 1.4em;
-	text-align: center;
-	margin: 20px 0 0 50px;
+	margin: 20px auto 0 auto;
 	display: block;
 	height: 30px;
 	line-height: 30px;
@@ -276,6 +290,10 @@ header a.settings {
 			border-bottom: 1px solid #2e2e2e; 
 		}
 	
+		.flux li:after, .flux li:before, .flux li:last-child:after  {
+			display: none;
+		}
+
 /* FOOTER */
 
 /* WEATHER */
@@ -550,12 +568,20 @@ footer {
 		min-width: 60px;
 	}
 	
+	.leftContent ul li {
+		font-size: 0;
+	}
+
 	.rightContent {
 		width: 94%;
 	}
 	
-	header h1, header h2, header a, .leftContent time {
+	header h1, header h2, header a.settings, .leftContent time {
 		display: none;
+	}
+
+	header .profilPic { 
+		margin-top: 10px;
 	}
 	
 	header {
