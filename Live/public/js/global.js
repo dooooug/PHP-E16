@@ -40,4 +40,22 @@ $('.leftContent ul li').click(function() {
 	$(this).siblings().children('.toggle').slideUp(400);
 });
 
+/* WEATHER */
+$.simpleWeather({
+	location: 'Montreuil, Paris',
+	woeid: '',
+	unit: 'c',
+	success: function(weather) {
+	html = '<h2><i class="icon-'+weather.code+'"></i></h2>';
+
+	$("#weather").html(html);
+	},
+
+	error: function(error) {
+	$("#weather").html('<p>'+error+'</p>');
+}
+
+
+});
+
 });
