@@ -7,7 +7,7 @@ class App_controller extends Controller{
   }
   
   public function home($f3){
-    $f3->set('events', $this->model->getEvents(array('promo'=>$f3->get('SESSION.promo'))));
+    $f3->set('events', $this->model->getEvents());
   }
   
   public function signin($f3){
@@ -61,16 +61,12 @@ class App_controller extends Controller{
         $this->tpl['sync']='editEvent.html';
       break;
       case 'POST': 
-        $this->model->editEvent(array('id'=>$f3->get('PARAMS.id')));
-        $f3->reroute('/');
-      break;
-    }
-  }
-  
-  public function deleteEvent($f3){
-    switch($f3->get('VERB')){
-      case 'GET': 
-        $this->model->deleteEvent(array('id'=>$f3->get('PARAMS.id')));
+        if($f3->get('POST.edit')){
+          $this->model->editEvent(array('id'=>$f3->get('PARAMS.id')));
+        }
+        else if($f3->get('POST.delete')){
+          $this->model->deleteEvent(array('id'=>$f3->get('PARAMS.id')));
+        }
         $f3->reroute('/');
       break;
     }

@@ -18,17 +18,50 @@
   <p>Hello <?php echo $SESSION['firstname'] . " " . $SESSION['lastname'] . " de la promo " . $SESSION['promo'] . " groupe " . $SESSION['group'] . " et du sous-groupe " . $SESSION['subgroup']; ?></p>
   <a href="signout/">Signout</a>
   
-  <p><a href="event/add">Nouvel Evenement</a></p>
+  <h2>Nouvel Évènement</h2>
+  <form action="event/add" method="POST">
+    <input type="text" name="title" placeholder="title" />
+    <textarea name="description" placeholder="description"></textarea>
+    <input type="text" name="speaker" placeholder="speaker" />
+    <input style="display:none;" type="text" name="creator" value="<?php echo $SESSION['id']; ?>" />
+    <input type="text" name="room" placeholder="room"  />
+    <input type="date" name="date" />
+    <input type="time" name="hour" />
+    <input type="text" name="promo" placeholder="promo" />
+    <input type="text" name="priority" placeholder="priority"  />
+    <input type="submit" value="Add">
+  </form>
+  
+  
+  <h2>Évènements vous concernant</h2>
   
   <?php if(isset($events)) : 
     foreach($events as $event) :?>
-    <p><?php echo $event->title; 
+    <p>
+    <?php if($SESSION['promo'] == $event->promo) : echo $event->title; 
         if($event->creator == $SESSION['id']) :?>
         <a href="event/<?php echo $event->id;?>">Éditer</a>
       <?php endif;?>
-    </p>
+      <br>
+      </p>
+    <?php endif;?>
   <?php endforeach;
   endif;?>
+  
+  
+  <h2>Derniers évènements créés</h2>
+  <p>
+  <?php if(isset($events)) : 
+    $i=0;
+    foreach(array_slice($events, 0, 4) as $event) :?>
+    <?php echo $event->title; 
+        if($event->creator == $SESSION['id']) :?>
+        <a href="event/<?php echo $event->id;?>">Éditer</a>
+      <?php endif;?>
+      <br>
+  <?php endforeach;
+  endif;?>
+  </p>
     
 </body>
 </html>

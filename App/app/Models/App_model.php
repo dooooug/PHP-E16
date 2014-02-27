@@ -18,8 +18,8 @@ private $f3;
    return $this->mapper->load(array('login=? and password=?', $params['login'], $params['password']));
  }
  
- public function getEvents($params){
-   return $this->getMapper('events')->find(array('promo=?', $params['promo']));
+ public function getEvents(){
+   return $this->getMapper('events')->find();
  }
  
  public function getEvent($params){
@@ -27,8 +27,7 @@ private $f3;
  }
  
  public function addEvent(){
-   $mapper = $this->getMapper('events');
-   $mapper->reset();
+   $mapper = $this->getEventMapper();
    $mapper->copyFrom('POST',function($val) {
        return array_intersect_key($val, array_flip(array('title','description','speaker','creator','room','date','hour','promo','priority')));
    });
@@ -36,8 +35,7 @@ private $f3;
  }
  
  public function editEvent($params){
-   $mapper = $this->getMapper('events');
-   $mapper->reset();
+   $mapper = $this->getEventMapper();
    $mapper->load(array('id=?',$params['id']));
    $mapper->copyFrom('POST',function($val) {
        return array_intersect_key($val, array_flip(array('title','description','speaker','creator','room','date','hour','promo','priority')));
@@ -46,10 +44,15 @@ private $f3;
  }
  
  public function deleteEvent($params){
-   $mapper = $this->getMapper('events');
-   $mapper->reset();
+   $mapper = $this->getEventMapper();
    $mapper->load(array('id=?',$params['id']));
    $mapper->erase();
+ }
+ 
+ public function getEventMapper(){
+   $mapper = $this->getMapper('events');
+   $mapper->reset();
+   return $mapper;
  }
 }
 ?>
