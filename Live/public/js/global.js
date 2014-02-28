@@ -22,7 +22,7 @@ var mois  = new Array('Janvier', 'F&eacute;vrier', 'Mars', 'Avril', 'Mai', 'Juin
 var j     = date.getDate();
 var jour  = date.getDay();
 var jours = new Array('Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi');
-var date  = jours[jour]+' <span>'+j+'</span> '+mois[moi];
+var date  = jours[jour]+' '+j+' '+mois[moi];
 
 $('.leftContent time').html(date);
 
@@ -34,5 +34,35 @@ $('html, body').animate({
 	scrollTop: $('.' + day).offset().top
 }, 1000);
 
+/* LEFT UL */
+$('.leftContent ul li:nth-child(1)').click(function() {
+	$(this).children('.toggle').slideToggle(400);
+	$(this).siblings().children('.toggle').slideUp(400);
+});
+
+$('.leftContent ul li:nth-child(3)').click(function() {
+	$(this).children('.toggle').slideToggle(400);
+	$(this).siblings().children('.toggle').slideUp(400);
+});
+
+$('.leftContent ul li:nth-child(2) a').click(function() {
+	$(this).next('.toggle').slideToggle(400);
+	return false;
+});
+
+/* WEATHER */
+$.simpleWeather({
+	location: 'Montreuil, Paris',
+	woeid: '',
+	unit: 'c',
+	success: function(weather) {
+		html = '<h2><i class="icon-'+weather.code+'"></i></h2>';
+		$("#weather").html(html);
+	},
+
+	error: function(error) {
+		$("#weather").html('<p>'+error+'</p>');
+	}
+});
 
 });
