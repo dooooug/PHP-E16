@@ -60,7 +60,7 @@ class App_controller extends Controller{
       case 'GET': 
         $f3->set('event', $this->model->getEvent(array('id'=>$f3->get('PARAMS.id'))));
         $f3->set('promos', $this->model->getPromos());
-        $this->tpl['sync']='editEvent.html';
+        $this->tpl['async']='partials/editEvent.html';
       break;
       case 'POST': 
         if($f3->get('POST.edit')){

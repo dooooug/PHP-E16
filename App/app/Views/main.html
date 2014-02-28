@@ -46,12 +46,16 @@
       <p>
       <?php echo $event->title; 
       if($event->creator == $SESSION['id']) :?>
-        <a href="event/<?php echo $event->id;?>">Éditer</a>
+        <a class="editEvent" href="event/<?php echo $event->id;?>">Éditer</a>
+        <div class="edit"></div>
       <?php endif;?>
       <br>
       </p>
     <?php endforeach;
   endif;?>
+  
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="public/js/script.js"></script>
     
 </body>
 </html>
