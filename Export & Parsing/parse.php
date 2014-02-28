@@ -132,6 +132,6 @@ echo "<pre>";
 print_r($promo);
 echo "</pre>";
 
-// echo json_encode($promo);
+echo json_encode($promo);
 
 ?>

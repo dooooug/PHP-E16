@@ -1,38 +1,92 @@
 {
-  lundi:{
-    m1:{
-      g1:{
-        a:{
-          'cours':'html',
-          'salle':10,
-          'prof':'fpumir'
-        },
-        b:{
-          'cours':'html',
-          'salle':'10',
-          'prof':'fpumir'
-        }
+  "H3 P2016": {
+    "Lundi": {
+      "m1": {
+        "cours": "Anglais",
+        "9h - 11h": "G2A",
+        "11h - 13h": "G1A"
       },
-      g2:{
-        a:{
-          'cours':'html',
-          'salle':'10',
-          'prof':'fpumir'
-        },
-        b:{
-          'cours':'html',
-          'salle':'10',
-          'prof':'fpumir'
-        }
+      "s1": {
+        "cours": "Ecriture publicitaire et web",
+        "14h - 16h": "G2B",
+        "16h - 18h": "G1B"
       }
     },
-    m2:{
+    "Mardi": {
+      "m1": {
+        "cours": "Clean design : Indispensables",
+        "9h - 11h": "G1",
+        "11h - 13h": "G2"
+      },
+      "m2": {
+        "cours": "Anglais",
+        "9h - 11h": "G2B",
+        "11h - 13h": "G1B"
+      },
+      "s1": {
+        "cours": "Fondamentaux de l'internet",
+        "14h - 16h": "G1",
+        "16h - 18h": "G2"
+      },
+      "s2": {
+        "cours": "Ecriture publicitaire et web",
+        "14h - 16h": "G2A",
+        "16h - 18h": "G1A"
+      }
     },
-    s1{
+    "Mercredi": {
+      "m1": {
+        "cours": "Marketing",
+        "9h - 13h": "G1"
+      },
+      "s1": {
+        "cours": "Marketing",
+        "14h - 18h": "G2"
+      }
     },
-    s2{
+    "Jeudi": {
+      "m1": {
+        "cours": "PHP MySQL",
+        "9h - 11h": "G1",
+        "11h - 13h": "G2"
+      },
+      "m2": {
+        "cours": "Drupal",
+        "9h - 11h": "G2",
+        "11h - 13h": "G1"
+      },
+      "s1": {
+        "cours": "PHP MySQL",
+        "14h - 16h": "G1",
+        "16h - 18h": "G2"
+      },
+      "s2": {
+        "cours": "Drupal",
+        "14h - 16h": "G2",
+        "16h - 18h": "G1"
+      }
+    },
+    "Vendredi": {
+      "m1": {
+        "cours": "PHP MySQL",
+        "9h - 11h": "G1",
+        "11h - 13h": "G2"
+      },
+      "m2": {
+        "cours": "A la mani\u00e8re de",
+        "9h - 11h": "G2A",
+        "11h - 13h": "G1A"
+      },
+      "s1": {
+        "cours": "BDD SQL",
+        "14h - 16h": "G1",
+        "16h - 18h": "G2"
+      },
+      "s2": {
+        "cours": "A la mani\u00e8re de",
+        "14h - 16h": "G2B",
+        "16h - 18h": "G1B"
+      }
     }
-  },
-  mardi:{
-  },
+  }
 }
