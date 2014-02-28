@@ -57,19 +57,27 @@
     <?php endforeach;
   endif;?>
   
-  
+  <h2>Emploi du temps</h2>
   
   <?php if(isset($program)) : 
     foreach($program as $days) : ?>
-    <div class="day" style="background: red;">
+    <div class="day" style="background: red; color: white;">
       <?php foreach($days as $time) : ?>
-        <div class="time" style="background: blue;">
-          <h1>
-            <?php if(isset($time['G'.$SESSION['group']][$SESSION['subgroup']]['course'])){ echo $time['G'.$SESSION['group']][$SESSION['subgroup']]['course']; } ?>
-          </h1>
-          <p>
-            <?php if(isset($time['G'.$SESSION['group']][$SESSION['subgroup']]['course'])){ echo $time['G'.$SESSION['group']][$SESSION['subgroup']]['speaker']; } ?>
-          </p>
+        <div class="time" style="background: blue; min-height: 10px;">
+          <?php if(isset($time['G'.$SESSION['group']][$SESSION['subgroup']]['course'])) : ?>
+            <h3>
+              <?php echo $time['G'.$SESSION['group']][$SESSION['subgroup']]['course']; ?>
+            </h3>
+            <p>
+              <?php echo $time['G'.$SESSION['group']][$SESSION['subgroup']]['speaker']; ?>
+            </p>
+            <p>
+              <?php echo $time['G'.$SESSION['group']][$SESSION['subgroup']]['start']; ?>
+            </p>
+            <p>
+              <?php echo $time['G'.$SESSION['group']]['room']; ?>
+            </p>
+          <?php endif;?>
         </div>
       <?php endforeach;?>
     </div>

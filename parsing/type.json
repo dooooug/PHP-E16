@@ -5,32 +5,44 @@
                 "G2": {
                     "A": {
                         "course": "Anglais",
-                        "speaker": "S. BACKERS"
-                    }
+                        "speaker": "S. BACKERS",
+                        "start": "09h",
+                        "end": "11h"
+                    },
+                    "room": "10"
                 }
             },
             "m2": {
                 "G1": {
                     "A": {
                         "course": "Anglais",
-                        "speaker": "S. BACKERS"
-                    }
+                        "speaker": "S. BACKERS",
+                        "start": "11h",
+                        "end": "13h"
+                    },
+                    "room": "5"
                 }
             },
             "s1": {
                 "G2": {
                     "B": {
                         "course": "Ecriture publicitaire et web",
-                        "speaker": "C. RODGOLD"
-                    }
+                        "speaker": "C. RODGOLD",
+                        "start": "14h",
+                        "end": "16h"
+                    },
+                    "room": "5"
                 }
             },
             "s2": {
                 "G1": {
                     "B": {
                         "course": "Ecriture publicitaire et web",
-                        "speaker": "C. RODGOLD"
-                    }
+                        "speaker": "C. RODGOLD",
+                        "start": "16h",
+                        "end": "18h"
+                    },
+                    "room": "10"
                 }
             }
         },
@@ -39,72 +51,104 @@
                 "G1": {
                     "A": {
                         "course": "Clean design : Indispensables",
-                        "speaker": "J. VIALLARD"
+                        "speaker": "J. VIALLARD",
+                        "start": "09h",
+                        "end": "11h"
                     },
                     "B": {
                         "course": "Clean design : Indispensables",
-                        "speaker": "J. VIALLARD"
-                    }
+                        "speaker": "J. VIALLARD",
+                        "start": "09h",
+                        "end": "11h"
+                    },
+                    "room": "5"
                 },
                 "G2": {
                     "B": {
                         "course": "Anglais",
-                        "speaker": "S. BACKERS"
-                    }
+                        "speaker": "S. BACKERS",
+                        "start": "09h",
+                        "end": "11h"
+                    },
+                    "room": "10"
                 }
             },
             "m2": {
                 "G2": {
                     "A": {
                         "course": "Clean design : Indispensables",
-                        "speaker": "J. VIALLARD"
+                        "speaker": "J. VIALLARD",
+                        "start": "11h",
+                        "end": "13h"
                     },
                     "B": {
                         "course": "Clean design : Indispensables",
-                        "speaker": "J. VIALLARD"
-                    }
+                        "speaker": "J. VIALLARD",
+                        "start": "11h",
+                        "end": "13h"
+                    },
+                    "room": "10"
                 },
                 "G1": {
                     "B": {
                         "course": "Anglais",
-                        "speaker": "S. BACKERS"
-                    }
+                        "speaker": "S. BACKERS",
+                        "start": "11h",
+                        "end": "13h"
+                    },
+                    "room": "5"
                 }
             },
             "s1": {
                 "G1": {
                     "A": {
                         "course": "Fondamentaux de l'internet",
-                        "speaker": "D. VILLA MONTEIRO"
+                        "speaker": "D. VILLA MONTEIRO",
+                        "start": "14h",
+                        "end": "16h"
                     },
                     "B": {
                         "course": "Fondamentaux de l'internet",
-                        "speaker": "D. VILLA MONTEIRO"
-                    }
+                        "speaker": "D. VILLA MONTEIRO",
+                        "start": "14h",
+                        "end": "16h"
+                    },
+                    "room": "10"
                 },
                 "G2": {
                     "A": {
                         "course": "Ecriture publicitaire et web",
-                        "speaker": "C. RODGOLD"
-                    }
+                        "speaker": "C. RODGOLD",
+                        "start": "14h",
+                        "end": "16h"
+                    },
+                    "room": "5"
                 }
             },
             "s2": {
                 "G2": {
                     "A": {
                         "course": "Fondamentaux de l'internet",
-                        "speaker": "D. VILLA MONTEIRO"
+                        "speaker": "D. VILLA MONTEIRO",
+                        "start": "16h",
+                        "end": "18h"
                     },
                     "B": {
                         "course": "Fondamentaux de l'internet",
-                        "speaker": "D. VILLA MONTEIRO"
-                    }
+                        "speaker": "D. VILLA MONTEIRO",
+                        "start": "16h",
+                        "end": "18h"
+                    },
+                    "room": "5"
                 },
                 "G1": {
                     "A": {
                         "course": "Ecriture publicitaire et web",
-                        "speaker": "C. RODGOLD"
-                    }
+                        "speaker": "C. RODGOLD",
+                        "start": "16h",
+                        "end": "18h"
+                    },
+                    "room": "10"
                 }
             }
         },
@@ -113,48 +157,68 @@
                 "G1": {
                     "A": {
                         "course": "Marketing",
-                        "speaker": "P. CONCHOU"
+                        "speaker": "P. CONCHOU",
+                        "start": "09h",
+                        "end": "11h"
                     },
                     "B": {
                         "course": "Marketing",
-                        "speaker": "P. CONCHOU"
-                    }
+                        "speaker": "P. CONCHOU",
+                        "start": "09h",
+                        "end": "11h"
+                    },
+                    "room": "5"
                 }
             },
             "m2": {
                 "G1": {
                     "A": {
                         "course": "Marketing",
-                        "speaker": "P. CONCHOU"
+                        "speaker": "P. CONCHOU",
+                        "start": "11h",
+                        "end": "13h"
                     },
                     "B": {
                         "course": "Marketing",
-                        "speaker": "P. CONCHOU"
-                    }
+                        "speaker": "P. CONCHOU",
+                        "start": "11h",
+                        "end": "13h"
+                    },
+                    "room": "5"
                 }
             },
             "s1": {
                 "G2": {
                     "A": {
                         "course": "Marketing",
-                        "speaker": "P. CONCHOU"
+                        "speaker": "P. CONCHOU",
+                        "start": "14h",
+                        "end": "16h"
                     },
                     "B": {
                         "course": "Marketing",
-                        "speaker": "P. CONCHOU"
-                    }
+                        "speaker": "P. CONCHOU",
+                        "start": "14h",
+                        "end": "16h"
+                    },
+                    "room": "5"
                 }
             },
             "s2": {
                 "G2": {
                     "A": {
                         "course": "Marketing",
-                        "speaker": "P. CONCHOU"
+                        "speaker": "P. CONCHOU",
+                        "start": "16h",
+                        "end": "18h"
                     },
                     "B": {
                         "course": "Marketing",
-                        "speaker": "P. CONCHOU"
-                    }
+                        "speaker": "P. CONCHOU",
+                        "start": "16h",
+                        "end": "18h"
+                    },
+                    "room": "5"
                 }
             }
         },
@@ -163,88 +227,128 @@
                 "G1": {
                     "A": {
                         "course": "PHP MySQL",
-                        "speaker": "F. PUMIR"
+                        "speaker": "F. PUMIR",
+                        "start": "09h",
+                        "end": "11h"
                     },
                     "B": {
                         "course": "PHP MySQL",
-                        "speaker": "F. PUMIR"
-                    }
+                        "speaker": "F. PUMIR",
+                        "start": "09h",
+                        "end": "11h"
+                    },
+                    "room": "5"
                 },
                 "G2": {
                     "A": {
                         "course": "Drupal",
-                        "speaker": "E. BELLOT"
+                        "speaker": "E. BELLOT",
+                        "start": "09h",
+                        "end": "11h"
                     },
                     "B": {
                         "course": "Drupal",
-                        "speaker": "E. BELLOT"
-                    }
+                        "speaker": "E. BELLOT",
+                        "start": "09h",
+                        "end": "11h"
+                    },
+                    "room": "10"
                 }
             },
             "m2": {
                 "G2": {
                     "A": {
                         "course": "PHP MySQL",
-                        "speaker": "F. PUMIR"
+                        "speaker": "F. PUMIR",
+                        "start": "11h",
+                        "end": "13h"
                     },
                     "B": {
                         "course": "PHP MySQL",
-                        "speaker": "F. PUMIR"
-                    }
+                        "speaker": "F. PUMIR",
+                        "start": "11h",
+                        "end": "13h"
+                    },
+                    "room": "10"
                 },
                 "G1": {
                     "A": {
                         "course": "Drupal",
-                        "speaker": "E. BELLOT"
+                        "speaker": "E. BELLOT",
+                        "start": "11h",
+                        "end": "13h"
                     },
                     "B": {
                         "course": "Drupal",
-                        "speaker": "E. BELLOT"
-                    }
+                        "speaker": "E. BELLOT",
+                        "start": "11h",
+                        "end": "13h"
+                    },
+                    "room": "5"
                 }
             },
             "s1": {
                 "G1": {
                     "A": {
                         "course": "PHP MySQL",
-                        "speaker": "F. PUMIR"
+                        "speaker": "F. PUMIR",
+                        "start": "14h",
+                        "end": "16h"
                     },
                     "B": {
                         "course": "PHP MySQL",
-                        "speaker": "F. PUMIR"
-                    }
+                        "speaker": "F. PUMIR",
+                        "start": "14h",
+                        "end": "16h"
+                    },
+                    "room": "10"
                 },
                 "G2": {
                     "A": {
                         "course": "Drupal",
-                        "speaker": "E. BELLOT"
+                        "speaker": "E. BELLOT",
+                        "start": "14h",
+                        "end": "16h"
                     },
                     "B": {
                         "course": "Drupal",
-                        "speaker": "E. BELLOT"
-                    }
+                        "speaker": "E. BELLOT",
+                        "start": "14h",
+                        "end": "16h"
+                    },
+                    "room": "5"
                 }
             },
             "s2": {
                 "G2": {
                     "A": {
                         "course": "PHP MySQL",
-                        "speaker": "F. PUMIR"
+                        "speaker": "F. PUMIR",
+                        "start": "16h",
+                        "end": "18h"
                     },
                     "B": {
                         "course": "PHP MySQL",
-                        "speaker": "F. PUMIR"
-                    }
+                        "speaker": "F. PUMIR",
+                        "start": "16h",
+                        "end": "18h"
+                    },
+                    "room": "5"
                 },
                 "G1": {
                     "A": {
                         "course": "Drupal",
-                        "speaker": "E. BELLOT"
+                        "speaker": "E. BELLOT",
+                        "start": "16h",
+                        "end": "18h"
                     },
                     "B": {
                         "course": "Drupal",
-                        "speaker": "E. BELLOT"
-                    }
+                        "speaker": "E. BELLOT",
+                        "start": "16h",
+                        "end": "18h"
+                    },
+                    "room": "10"
                 }
             }
         },
@@ -253,72 +357,104 @@
                 "G1": {
                     "A": {
                         "course": "PHP MySQL",
-                        "speaker": "F. PUMIR"
+                        "speaker": "F. PUMIR",
+                        "start": "09h",
+                        "end": "11h"
                     },
                     "B": {
                         "course": "PHP MySQL",
-                        "speaker": "F. PUMIR"
-                    }
+                        "speaker": "F. PUMIR",
+                        "start": "09h",
+                        "end": "11h"
+                    },
+                    "room": "5"
                 },
                 "G2": {
                     "A": {
                         "course": "A la manière de",
-                        "speaker": "B. LIGNEL"
-                    }
+                        "speaker": "B. LIGNEL",
+                        "start": "09h",
+                        "end": "11h"
+                    },
+                    "room": "10"
                 }
             },
             "m2": {
                 "G2": {
                     "A": {
                         "course": "PHP MySQL",
-                        "speaker": "F. PUMIR"
+                        "speaker": "F. PUMIR",
+                        "start": "11h",
+                        "end": "13h"
                     },
                     "B": {
                         "course": "PHP MySQL",
-                        "speaker": "F. PUMIR"
-                    }
+                        "speaker": "F. PUMIR",
+                        "start": "11h",
+                        "end": "13h"
+                    },
+                    "room": "10"
                 },
                 "G1": {
                     "A": {
                         "course": "A la manière de",
-                        "speaker": "B. LIGNEL"
-                    }
+                        "speaker": "B. LIGNEL",
+                        "start": "11h",
+                        "end": "13h"
+                    },
+                    "room": "5"
                 }
             },
             "s1": {
                 "G1": {
                     "A": {
                         "course": "BDD SQL",
-                        "speaker": "D. SZALKOWSKI"
+                        "speaker": "D. SZALKOWSKI",
+                        "start": "14h",
+                        "end": "16h"
                     },
                     "B": {
                         "course": "BDD SQL",
-                        "speaker": "D. SZALKOWSKI"
-                    }
+                        "speaker": "D. SZALKOWSKI",
+                        "start": "14h",
+                        "end": "16h"
+                    },
+                    "room": "10"
                 },
                 "G2": {
                     "B": {
                         "course": "A la manière de",
-                        "speaker": "B. LIGNEL"
-                    }
+                        "speaker": "B. LIGNEL",
+                        "start": "14h",
+                        "end": "16h"
+                    },
+                    "room": "5"
                 }
             },
             "s2": {
                 "G2": {
                     "A": {
                         "course": "BDD SQL",
-                        "speaker": "D. SZALKOWSKI"
+                        "speaker": "D. SZALKOWSKI",
+                        "start": "16h",
+                        "end": "18h"
                     },
                     "B": {
                         "course": "BDD SQL",
-                        "speaker": "D. SZALKOWSKI"
-                    }
+                        "speaker": "D. SZALKOWSKI",
+                        "start": "16h",
+                        "end": "18h"
+                    },
+                    "room": "5"
                 },
                 "G1": {
                     "B": {
                         "course": "A la manière de",
-                        "speaker": "B. LIGNEL"
-                    }
+                        "speaker": "B. LIGNEL",
+                        "start": "16h",
+                        "end": "18h"
+                    },
+                    "room": "10"
                 }
             }
         }
