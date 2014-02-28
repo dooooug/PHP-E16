@@ -34,7 +34,10 @@
         <?php endforeach;
       endif; ?>
     </select>
-    <input type="text" name="priority" placeholder="priority"  />
+    <select name="priority">
+      <option value="1">Obligatoire</option>
+      <option value="2">Optionnel</option>
+    </select>
     <input type="submit" value="Add">
   </form>
   
@@ -53,6 +56,26 @@
       </p>
     <?php endforeach;
   endif;?>
+  
+  
+  
+  <?php if(isset($program)) : 
+    foreach($program as $days) : ?>
+    <div class="day" style="background: red;">
+      <?php foreach($days as $time) : ?>
+        <div class="time" style="background: blue;">
+          <h1>
+            <?php if(isset($time['G'.$SESSION['group']][$SESSION['subgroup']]['course'])){ echo $time['G'.$SESSION['group']][$SESSION['subgroup']]['course']; } ?>
+          </h1>
+          <p>
+            <?php if(isset($time['G'.$SESSION['group']][$SESSION['subgroup']]['course'])){ echo $time['G'.$SESSION['group']][$SESSION['subgroup']]['speaker']; } ?>
+          </p>
+        </div>
+      <?php endforeach;?>
+    </div>
+    <?php endforeach;?>
+  <?php endif;?>
+  
   
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="public/js/script.js"></script>

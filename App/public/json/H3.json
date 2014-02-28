@@ -1,0 +1,326 @@
+{
+    "H3": {
+        "Lundi": {
+            "m1": {
+                "G2": {
+                    "A": {
+                        "course": "Anglais",
+                        "speaker": "S. BACKERS"
+                    }
+                }
+            },
+            "m2": {
+                "G1": {
+                    "A": {
+                        "course": "Anglais",
+                        "speaker": "S. BACKERS"
+                    }
+                }
+            },
+            "s1": {
+                "G2": {
+                    "B": {
+                        "course": "Ecriture publicitaire et web",
+                        "speaker": "C. RODGOLD"
+                    }
+                }
+            },
+            "s2": {
+                "G1": {
+                    "B": {
+                        "course": "Ecriture publicitaire et web",
+                        "speaker": "C. RODGOLD"
+                    }
+                }
+            }
+        },
+        "Mardi": {
+            "m1": {
+                "G1": {
+                    "A": {
+                        "course": "Clean design : Indispensables",
+                        "speaker": "J. VIALLARD"
+                    },
+                    "B": {
+                        "course": "Clean design : Indispensables",
+                        "speaker": "J. VIALLARD"
+                    }
+                },
+                "G2": {
+                    "B": {
+                        "course": "Anglais",
+                        "speaker": "S. BACKERS"
+                    }
+                }
+            },
+            "m2": {
+                "G2": {
+                    "A": {
+                        "course": "Clean design : Indispensables",
+                        "speaker": "J. VIALLARD"
+                    },
+                    "B": {
+                        "course": "Clean design : Indispensables",
+                        "speaker": "J. VIALLARD"
+                    }
+                },
+                "G1": {
+                    "B": {
+                        "course": "Anglais",
+                        "speaker": "S. BACKERS"
+                    }
+                }
+            },
+            "s1": {
+                "G1": {
+                    "A": {
+                        "course": "Fondamentaux de l'internet",
+                        "speaker": "D. VILLA MONTEIRO"
+                    },
+                    "B": {
+                        "course": "Fondamentaux de l'internet",
+                        "speaker": "D. VILLA MONTEIRO"
+                    }
+                },
+                "G2": {
+                    "A": {
+                        "course": "Ecriture publicitaire et web",
+                        "speaker": "C. RODGOLD"
+                    }
+                }
+            },
+            "s2": {
+                "G2": {
+                    "A": {
+                        "course": "Fondamentaux de l'internet",
+                        "speaker": "D. VILLA MONTEIRO"
+                    },
+                    "B": {
+                        "course": "Fondamentaux de l'internet",
+                        "speaker": "D. VILLA MONTEIRO"
+                    }
+                },
+                "G1": {
+                    "A": {
+                        "course": "Ecriture publicitaire et web",
+                        "speaker": "C. RODGOLD"
+                    }
+                }
+            }
+        },
+        "Mercredi": {
+            "m1": {
+                "G1": {
+                    "A": {
+                        "course": "Marketing",
+                        "speaker": "P. CONCHOU"
+                    },
+                    "B": {
+                        "course": "Marketing",
+                        "speaker": "P. CONCHOU"
+                    }
+                }
+            },
+            "m2": {
+                "G1": {
+                    "A": {
+                        "course": "Marketing",
+                        "speaker": "P. CONCHOU"
+                    },
+                    "B": {
+                        "course": "Marketing",
+                        "speaker": "P. CONCHOU"
+                    }
+                }
+            },
+            "s1": {
+                "G2": {
+                    "A": {
+                        "course": "Marketing",
+                        "speaker": "P. CONCHOU"
+                    },
+                    "B": {
+                        "course": "Marketing",
+                        "speaker": "P. CONCHOU"
+                    }
+                }
+            },
+            "s2": {
+                "G2": {
+                    "A": {
+                        "course": "Marketing",
+                        "speaker": "P. CONCHOU"
+                    },
+                    "B": {
+                        "course": "Marketing",
+                        "speaker": "P. CONCHOU"
+                    }
+                }
+            }
+        },
+        "Jeudi": {
+            "m1": {
+                "G1": {
+                    "A": {
+                        "course": "PHP MySQL",
+                        "speaker": "F. PUMIR"
+                    },
+                    "B": {
+                        "course": "PHP MySQL",
+                        "speaker": "F. PUMIR"
+                    }
+                },
+                "G2": {
+                    "A": {
+                        "course": "Drupal",
+                        "speaker": "E. BELLOT"
+                    },
+                    "B": {
+                        "course": "Drupal",
+                        "speaker": "E. BELLOT"
+                    }
+                }
+            },
+            "m2": {
+                "G2": {
+                    "A": {
+                        "course": "PHP MySQL",
+                        "speaker": "F. PUMIR"
+                    },
+                    "B": {
+                        "course": "PHP MySQL",
+                        "speaker": "F. PUMIR"
+                    }
+                },
+                "G1": {
+                    "A": {
+                        "course": "Drupal",
+                        "speaker": "E. BELLOT"
+                    },
+                    "B": {
+                        "course": "Drupal",
+                        "speaker": "E. BELLOT"
+                    }
+                }
+            },
+            "s1": {
+                "G1": {
+                    "A": {
+                        "course": "PHP MySQL",
+                        "speaker": "F. PUMIR"
+                    },
+                    "B": {
+                        "course": "PHP MySQL",
+                        "speaker": "F. PUMIR"
+                    }
+                },
+                "G2": {
+                    "A": {
+                        "course": "Drupal",
+                        "speaker": "E. BELLOT"
+                    },
+                    "B": {
+                        "course": "Drupal",
+                        "speaker": "E. BELLOT"
+                    }
+                }
+            },
+            "s2": {
+                "G2": {
+                    "A": {
+                        "course": "PHP MySQL",
+                        "speaker": "F. PUMIR"
+                    },
+                    "B": {
+                        "course": "PHP MySQL",
+                        "speaker": "F. PUMIR"
+                    }
+                },
+                "G1": {
+                    "A": {
+                        "course": "Drupal",
+                        "speaker": "E. BELLOT"
+                    },
+                    "B": {
+                        "course": "Drupal",
+                        "speaker": "E. BELLOT"
+                    }
+                }
+            }
+        },
+        "Vendredi": {
+            "m1": {
+                "G1": {
+                    "A": {
+                        "course": "PHP MySQL",
+                        "speaker": "F. PUMIR"
+                    },
+                    "B": {
+                        "course": "PHP MySQL",
+                        "speaker": "F. PUMIR"
+                    }
+                },
+                "G2": {
+                    "A": {
+                        "course": "A la manière de",
+                        "speaker": "B. LIGNEL"
+                    }
+                }
+            },
+            "m2": {
+                "G2": {
+                    "A": {
+                        "course": "PHP MySQL",
+                        "speaker": "F. PUMIR"
+                    },
+                    "B": {
+                        "course": "PHP MySQL",
+                        "speaker": "F. PUMIR"
+                    }
+                },
+                "G1": {
+                    "A": {
+                        "course": "A la manière de",
+                        "speaker": "B. LIGNEL"
+                    }
+                }
+            },
+            "s1": {
+                "G1": {
+                    "A": {
+                        "course": "BDD SQL",
+                        "speaker": "D. SZALKOWSKI"
+                    },
+                    "B": {
+                        "course": "BDD SQL",
+                        "speaker": "D. SZALKOWSKI"
+                    }
+                },
+                "G2": {
+                    "B": {
+                        "course": "A la manière de",
+                        "speaker": "B. LIGNEL"
+                    }
+                }
+            },
+            "s2": {
+                "G2": {
+                    "A": {
+                        "course": "BDD SQL",
+                        "speaker": "D. SZALKOWSKI"
+                    },
+                    "B": {
+                        "course": "BDD SQL",
+                        "speaker": "D. SZALKOWSKI"
+                    }
+                },
+                "G1": {
+                    "B": {
+                        "course": "A la manière de",
+                        "speaker": "B. LIGNEL"
+                    }
+                }
+            }
+        }
+    }
+}

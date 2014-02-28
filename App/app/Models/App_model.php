@@ -58,5 +58,10 @@ private $f3;
    $mapper->reset();
    return $mapper;
  }
+ 
+ public function getJson($params){
+   $string = file_get_contents("public/json/".$params['promo'].".json");
+   return json_decode($string,true);
+ }
 }
 ?>
