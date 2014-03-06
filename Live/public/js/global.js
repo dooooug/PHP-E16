@@ -50,5 +50,3 @@ $.simpleWeather({
 		$("#weather").html('<p>'+error+'</p>');
 	}
 });
-
-/* 500PX */

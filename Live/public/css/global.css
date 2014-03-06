@@ -220,7 +220,9 @@ header a.settings {
 	background: linear-gradient(to top, rgb(31,31,31) 0%, rgb(41,41,41) 100%);
 	box-shadow: inset 0px 1px 1px 0px #2e2e2e;
 	border: none;
-	box-sizing:content-box;
+	-webkit-box-sizing: content-box;
+	   -moz-box-sizing: content-box;
+	        box-sizing: content-box;  
 }
 
 	.event form input[type="submit"]:hover, .event form input[type="submit"]:focus { 
@@ -425,7 +427,9 @@ footer small {
 	border-radius: 3px;
 	background: rgba(255,255,255,0.3);
 	box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 .rightContent li.active { 
@@ -587,6 +591,7 @@ footer small {
 
 #popin {
 	display: none;
+	display: none;
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -649,7 +654,11 @@ footer small {
 		margin: 80px 0;
 		font-size: 0;
 	}
-
+	
+	.leftContent ul li a {
+		display: none;
+	}
+	
 	.rightContent {
 		width: 94%;
 	}
