@@ -3,9 +3,7 @@
   <html lang="fr">
   <head>
   	<meta charset="UTF-8" />
-	
-  	<title>Heti'Cal</title>
-	
+  	<title>Heti'Cal</title> 
   	<meta name="description" content="">
   	<meta name="robots" content="noindex, nofollow">
   	<meta content="IE-edge" http-equiv="X-UA-Compatible">
@@ -37,26 +35,25 @@
   					<a href="#">Flux</a>
   					<div class="toggle">
   						<ul class="flux">
-  							<li>
-  								<h1>Christophe Lepage à créé</h1>
-  								<q>« Cours du soir : Illustrator »</q>
-  								<p>Jeudi 18 février, à 18h</p>
-  							</li>
-  							<li>
-  								<h1>Johanna Pineau à créé</h1>
-  								<q>« Cours du soir : Illustrator »</q>
-  								<p>Jeudi 18 février, à 18h</p>
-  							</li>
-  							<li>
-  								<h1>Hugo Leloup à créé</h1>
-  								<q>« Cours du soir : Illustrator »</q>
-  								<p>Jeudi 18 février, à 18h</p>
-  							</li>
-  							<li>
-  								<h1>Christophe Lepage à créé</h1>
-  								<q>« Cours du soir : Illustrator »</q>
-  								<p>Jeudi 18 février, à 18h</p>
-  							</li>
+                <?php if(isset($events) && isset($users)) : 
+                  foreach (array_slice($events, 0, 5) as $event) :
+                    if($event->promo == $SESSION['promo']) : ?>
+        							<li>
+        								<?php foreach($users as $user) : ?>
+                          <?php if($event->creator == $user->id) : ?>
+                          <h1><?php echo $user->firstname . " " . $user->lastname;?> à créé</h1>
+                          <?php endif; ?>
+                        <?php endforeach; ?>
+        								<q>« <?php echo $event->title; ?> »</q>
+        								<p>
+                          <?php echo date("l d", strtotime($event->date)) . " à "; 
+                          if($event->hour == 1) echo "13h";
+                          elseif($event->hour == 2) echo "18h"; ?>
+                        </p>
+        							</li>
+                    <?php endif;
+                  endforeach; 
+                endif; ?>
   						</ul>
   					</div>
   				</li>
@@ -66,22 +63,25 @@
   					    <div class="event">
   					        <form method="post" action="event/add">
   					            <p>
+                            <input type="text" name="title" id="title" placeholder="Nom de l'événement"/>
+                            
                             <input style="display:none;" type="text" name="creator" value="<?php echo $SESSION['id']; ?>" />
+                            
+                            <input type="text" name="room" id="room" placeholder="Salle"/>
+                            
   					                <input type="date" name="date" id="date"/>
-					                
-  					                <input type="text" name="title" id="title" placeholder="Nom de l'événement"/>
-					                
+                            
+                            <select name="hour">
+                                <option value="1">13h</option>
+                                <option value="2">18h</option>
+                            </select>
+                            
                             <select name="promo">
                               <?php if(isset($promos)) :
                                 foreach($promos as $promo) : ?>
                                   <option value="<?php echo $promo->name; ?>"><?php echo $promo->name; ?></option>
                                 <?php endforeach;
                               endif; ?>
-                            </select>
-					                
-                            <select name="hour">
-                                <option value="1">13h</option>
-                                <option value="2">18h</option>
                             </select>
                             
                             <select name="priority">

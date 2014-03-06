@@ -9,6 +9,7 @@ class App_controller extends Controller{
   public function home($f3){
     $f3->set('events', $this->model->getEvents(array('promo'=>$f3->get('SESSION.promo'))));
     $f3->set('promos', $this->model->getPromos());
+    $f3->set('users', $this->model->getPeople());
     $program = $this->model->getJson(array('promo'=>$f3->get('SESSION.promo')));
     $f3->set('program', $program['H3']);
   }
