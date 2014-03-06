@@ -1,92 +1,159 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  
-	<title>Heti'Cal / Home</title>
-	<meta name="description" content="">
-  <base href="<?php echo $BASE; ?>/" />
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-  
-</head>
-<body>
-  <h1>HomePage</h1>
-  <?php if(isset($message)): ?> 
-  <div><?php echo $message; ?></div>
-  <?php endif;?>
-  <p>Hello <?php echo $SESSION['firstname'] . " " . $SESSION['lastname'] . " de la promo " . $SESSION['promo'] . " groupe " . $SESSION['group'] . " et du sous-groupe " . $SESSION['subgroup']; ?></p>
-  <a href="signout/">Signout</a>
-  
-  <h2>Nouvel Évènement</h2>
-  <form action="event/add" method="POST">
-    <input type="text" name="title" placeholder="title" />
-    <textarea name="description" placeholder="description"></textarea>
-    <input type="text" name="speaker" placeholder="speaker" />
-    <input style="display:none;" type="text" name="creator" value="<?php echo $SESSION['id']; ?>" />
-    <input type="text" name="room" placeholder="room"  />
-    <input type="date" name="date" />
-    <input type="time" name="hour" />
-    <select name="promo">
-      <?php if(isset($promos)) :
-        foreach($promos as $promo) : ?>
-          <option value="<?php echo $promo->name; ?>"><?php echo $promo->name; ?></option>
-        <?php endforeach;
-      endif; ?>
-    </select>
-    <select name="priority">
-      <option value="1">Obligatoire</option>
-      <option value="2">Optionnel</option>
-    </select>
-    <input type="submit" value="Add">
-  </form>
-  
-  
-  <h2>Évènements vous concernant</h2>
-  
-  <?php if(isset($events)) : 
-    foreach($events as $event) :?>
-      <p>
-      <?php echo $event->title; 
-      if($event->creator == $SESSION['id']) :?>
-        <a class="editEvent" href="event/<?php echo $event->id;?>">Éditer</a>
-        <div class="edit"></div>
-      <?php endif;?>
-      <br>
-      </p>
-    <?php endforeach;
-  endif;?>
-  
-  <h2>Emploi du temps</h2>
-  
-  <?php if(isset($program)) : 
-    foreach($program as $days) : ?>
-    <div class="day" style="background: red; color: white;">
-      <?php foreach($days as $time) : ?>
-        <div class="time" style="background: blue; min-height: 10px;">
-          <?php if(isset($time['G'.$SESSION['group']][$SESSION['subgroup']]['course'])) : ?>
-            <h3>
-              <?php echo $time['G'.$SESSION['group']][$SESSION['subgroup']]['course']; ?>
-            </h3>
-            <p>
-              <?php echo $time['G'.$SESSION['group']][$SESSION['subgroup']]['speaker']; ?>
-            </p>
-            <p>
-              <?php echo $time['G'.$SESSION['group']][$SESSION['subgroup']]['start']; ?>
-            </p>
-            <p>
-              <?php echo $time['G'.$SESSION['group']]['room']; ?>
-            </p>
+ <!DOCTYPE html>
+
+  <html lang="fr">
+  <head>
+  	<meta charset="UTF-8" />
+	
+  	<title>Heti'Cal</title>
+	
+  	<meta name="description" content="">
+  	<meta name="robots" content="noindex, nofollow">
+  	<meta content="IE-edge" http-equiv="X-UA-Compatible">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  	<!--[if lt IE 9]>
+  	  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  	  <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+  	<![endif]-->
+
+  	<link rel="icon" href="public/uploads/favicon.ico" />
+
+  	<!-- STYLESHEETS -->  
+  	<link href="public/css/reset.css" rel="stylesheet" type="text/css" /> 
+  	<link href="public/css/global.css" rel="stylesheet" type="text/css" />
+  	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+      <!-- /STYLESHEETS -->
+  </head>
+  <body>
+  	<section class="leftContent">
+  		<header>
+  			<img src="public/uploads/pp.jpg" alt="pp" class="profilPic">
+  				<a href="#" class="settings"><h1><?php echo $SESSION['firstname'] . " " . $SESSION['lastname']; ?></h1>
+  				<h2><?php echo $SESSION['promo'] . " G" . $SESSION['group'] . $SESSION['subgroup']; ?></h2></a>
+  		</header>
+  		<nav>
+  			<ul>
+  				<li>
+  					<a href="#">Flux</a>
+  					<div class="toggle">
+  						<ul class="flux">
+  							<li>
+  								<h1>Christophe Lepage à créé</h1>
+  								<q>« Cours du soir : Illustrator »</q>
+  								<p>Jeudi 18 février, à 18h</p>
+  							</li>
+  							<li>
+  								<h1>Johanna Pineau à créé</h1>
+  								<q>« Cours du soir : Illustrator »</q>
+  								<p>Jeudi 18 février, à 18h</p>
+  							</li>
+  							<li>
+  								<h1>Hugo Leloup à créé</h1>
+  								<q>« Cours du soir : Illustrator »</q>
+  								<p>Jeudi 18 février, à 18h</p>
+  							</li>
+  							<li>
+  								<h1>Christophe Lepage à créé</h1>
+  								<q>« Cours du soir : Illustrator »</q>
+  								<p>Jeudi 18 février, à 18h</p>
+  							</li>
+  						</ul>
+  					</div>
+  				</li>
+  				<li>
+  					<a href="#">Créer un événement</a>
+  					<div class="toggle">
+  					    <div class="event">
+  					        <form method="post" action="event/add">
+  					            <p>
+                            <input style="display:none;" type="text" name="creator" value="<?php echo $SESSION['id']; ?>" />
+  					                <input type="date" name="date" id="date"/>
+					                
+  					                <input type="text" name="title" id="title" placeholder="Nom de l'événement"/>
+					                
+                            <select name="promo">
+                              <?php if(isset($promos)) :
+                                foreach($promos as $promo) : ?>
+                                  <option value="<?php echo $promo->name; ?>"><?php echo $promo->name; ?></option>
+                                <?php endforeach;
+                              endif; ?>
+                            </select>
+					                
+                            <select name="hour">
+                                <option value="1">13h</option>
+                                <option value="2">18h</option>
+                            </select>
+                            
+                            <select name="priority">
+                              <option value="1">Obligatoire</option>
+                              <option value="2">Optionnel</option>
+                            </select>
+
+  					                <input type="submit" value="+" />
+  					            </p>
+  					        </form>
+  					    </div>
+  					</div>
+  				</li>
+  				<li>
+  					<a href="#">Synchronisation</a>
+  					<div class="toggle">
+  						<div class="sync">
+  							<p>Tu peux garder ton planning à jour en le synchronisant automatiquement à ton calendrier Google</p>
+  							<a href="#">Sign in with Google</a>
+  						</div>
+  					</div>
+  				</li>
+  			</ul>
+  		</nav>
+  		<footer>
+  			<div id="weather"></div>
+  			<time></time>
+  		</footer>
+  	</section>
+    <section class="rightContent">
+    <?php if(isset($program)) : 
+      foreach($program as $days) : ?>
+      <ul>
+        <?php foreach($days as $time) : ?>
+          <?php if(isset($time['name']) && isset($time['number'])) : ?>
+            <li class="<?php echo strtolower($time['name']);?>"><?php echo $time['name'] . " " . $time['number'];?></li>
+          <?php elseif(isset($time['G'.$SESSION['group']][$SESSION['subgroup']]['course'])) : ?>
+            <li class="active">
+              <time>
+                <?php echo $time['G'.$SESSION['group']][$SESSION['subgroup']]['start']; ?>
+              </time>
+              <div class="info">
+                <h3>
+                  <?php echo $time['G'.$SESSION['group']][$SESSION['subgroup']]['course']; ?>
+                </h3>
+                <h4>
+                  <?php echo $time['G'.$SESSION['group']][$SESSION['subgroup']]['speaker']; ?>
+                </h4>
+              </div>
+              <span class="room">
+                <?php echo $time['G'.$SESSION['group']]['room']; ?>
+              </span>
+              <time>
+                <?php echo $time['G'.$SESSION['group']][$SESSION['subgroup']]['end']; ?>
+              </time>
+            </li>
+          <?php else : ?>
+            <li></li>
           <?php endif;?>
-        </div>
+        <?php endforeach;?>
+      </ul>
       <?php endforeach;?>
-    </div>
-    <?php endforeach;?>
-  <?php endif;?>
-  
-  
-	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script type="text/javascript" src="public/js/script.js"></script>
+    <?php endif;?>
+      <h2>Semaine</h2>
+    </section>
+	
+  <!-- SCRIPTS -->
+  <script src="public/js/libraries/jquery-1.11.0.min.js"></script>
+  <script src="public/js/libraries/jquery.simpleWeather.js"></script>
+  <script src="public/js/global.js"></script>
+  <script src="public/js/script.js"></script>
+  <!-- /SCRIPTS -->
     
 </body>
 </html>
