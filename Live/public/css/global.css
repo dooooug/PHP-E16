@@ -132,6 +132,12 @@ header a.settings {
 	text-align: left;
 }
 
+.leftContent ul li a {
+	display: inline-block;
+	height: 50px;
+	width: 75%;
+}
+
 /* TOGGLE */
 
 .leftContent ul .toggle {
@@ -576,6 +582,59 @@ footer small {
 		margin-top: 22px;
 		box-shadow: 0px 1px 0px #c1524e;
 	} 
+
+/* POPIN */
+
+#popin {
+	display: none;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.7);
+}
+
+#popin .edit {
+	position: absolute;
+	height: 50%;
+	width: 40%;
+	top: 0; bottom: 0; left: 0; right: 0;
+	margin: auto auto;
+	border-radius: 10px;
+	background: #fff;
+}
+
+.edit a {
+	display: block;
+	height: 20px;
+	width: 35px;
+	font-size: 0;
+	float: right;
+	margin: 20px 0 0 0;
+	border-bottom-left-radius: 15px;
+	border-top-left-radius: 15px;
+	background: #0097bd;
+}
+
+.edit a:after {
+	content: '';
+	display: block;
+	height: 10px;
+	width: 10px;
+	margin: 5px 0 0 8px;
+	background: url('../img/cross.png') no-repeat;
+	-webkit-transition:all .2s ease-out;
+	   -moz-transition:all .2s ease-out;
+	     -o-transition:all .2s ease-out;
+	        transition:all .2s ease-out;
+
+}
+
+	.edit a:hover:after {
+		-webkit-transform: rotate(180deg);
+		   -moz-transform: rotate(180deg);
+			 -o-transform: rotate(180deg);
+			 	transform: rotate(180deg);
+	}
 
 /* MEDIA QUERIES */
 
