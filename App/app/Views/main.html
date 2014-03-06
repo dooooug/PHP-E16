@@ -118,7 +118,7 @@
         <?php foreach($days as $time) : 
           $i++; ?>
           <?php if($i==4) : ?>
-            <?php if(isset($events)) : ?>
+            <?php if(isset($events) && isset($events[0])) : ?>
               <?php foreach($events as $event) : ?>
                 <?php if($event->hour == 1) : ?>
                   <?php if(date("d", strtotime($event->date)) == $timenumber) :?>
@@ -144,6 +144,8 @@
                   <?php endif; ?>
                 <?php endif; ?>
               <?php endforeach; ?>
+            <?php else : ?>
+              <li></li>
             <?php endif; ?>
           <?php endif; ?>
           <?php if(isset($time['name']) && isset($time['number'])) : $timenumber = $time['number'];?>
@@ -172,7 +174,7 @@
             <li></li>
           <?php endif;?>
           <?php if($i==5) : ?>
-            <?php if(isset($events)) : ?>
+            <?php if(isset($events) && isset($events[0])) : ?>
               <?php foreach($events as $event) : ?>
                 <?php if($event->hour == 2) : ?>
                   <?php if(date("d", strtotime($event->date)) == $timenumber) : ?>
@@ -201,6 +203,8 @@
                   <?php endif; ?>
                 <?php endif; ?>
               <?php endforeach; ?>
+            <?php else : ?>
+              <li></li>
             <?php endif; ?>
           <?php endif; ?>
         <?php endforeach; $i=0;?>
