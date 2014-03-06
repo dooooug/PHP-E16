@@ -63,5 +63,9 @@ private $f3;
    $string = file_get_contents("public/json/".$params['promo'].".json");
    return json_decode($string,true);
  }
+ 
+ public function getPeople() {
+   return $this->getMapper('students')->find();
+ }
 }
 ?>
