@@ -63,6 +63,9 @@ for ($i=5; $i < 10; $i++) {
 	$afternoon = multiexplode(array("(","/",")"), $datas[$i]['M']);
   $speakerMorning = explode("\n", $datas[$i]['G']);
   $speakerAfternoon = explode("\n", $datas[$i]['N']);
+  
+  // Jour de la semaine
+  $courses['day'] = array("name"=>$datas[$i]['A'], "number"=>$datas[$i]['B'], "month"=>$datas[$i]['C'], "year"=>$datas[$i]['D']);
 
 	// COURS MORNING 
     // M1

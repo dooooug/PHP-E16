@@ -9,7 +9,8 @@ class App_controller extends Controller{
   public function home($f3){
     $f3->set('events', $this->model->getEvents(array('promo'=>$f3->get('SESSION.promo'))));
     $f3->set('promos', $this->model->getPromos());
-    $f3->set('program', $this->model->getJson(array('promo'=>$f3->get('SESSION.promo')))['H3']);
+    $program = $this->model->getJson(array('promo'=>$f3->get('SESSION.promo')));
+    $f3->set('program', $program['H3']);
   }
   
   public function signin($f3){
@@ -20,7 +21,7 @@ class App_controller extends Controller{
       case 'POST': 
         $auth = $this->model->signin(array('login'=>$f3->get('POST.login'), 'password'=>$f3->get('POST.password')));
         if(!$auth){
-          $f3->set('error', 'Oups, vous avez du vous fourvoyer dans vos logins. Ré-essayez, peut être que ça marchera cette foi.');
+          $f3->set('error', 'Oups, vous avez du vous fourvoyer dans vos logins. Ré-essayez, peut être que ça marchera cette fois.');
           $this->tpl['sync']='signin.html';
         }
         else {

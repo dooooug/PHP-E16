@@ -1,6 +1,12 @@
 {
     "H3": {
         "Lundi": {
+            "day": {
+                "name": "Lundi",
+                "number": 20,
+                "month": "janv",
+                "year": 2014
+            },
             "m1": {
                 "G2": {
                     "A": {
@@ -47,6 +53,12 @@
             }
         },
         "Mardi": {
+            "day": {
+                "name": "Mardi",
+                "number": 21,
+                "month": "janv",
+                "year": 2014
+            },
             "m1": {
                 "G1": {
                     "A": {
@@ -153,6 +165,12 @@
             }
         },
         "Mercredi": {
+            "day": {
+                "name": "Mercredi",
+                "number": 22,
+                "month": "janv",
+                "year": 2014
+            },
             "m1": {
                 "G1": {
                     "A": {
@@ -223,6 +241,12 @@
             }
         },
         "Jeudi": {
+            "day": {
+                "name": "Jeudi",
+                "number": 23,
+                "month": "janv",
+                "year": 2014
+            },
             "m1": {
                 "G1": {
                     "A": {
@@ -353,6 +377,12 @@
             }
         },
         "Vendredi": {
+            "day": {
+                "name": "Vendredi",
+                "number": 24,
+                "month": "janv",
+                "year": 2014
+            },
             "m1": {
                 "G1": {
                     "A": {
