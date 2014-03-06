@@ -112,11 +112,41 @@
   		</footer>
   	</section>
     <section class="rightContent">
-    <?php if(isset($program)) : 
+    <?php $i=0; $timenumber = 0; if(isset($program)) : 
       foreach($program as $days) : ?>
       <ul>
-        <?php foreach($days as $time) : ?>
-          <?php if(isset($time['name']) && isset($time['number'])) : ?>
+        <?php foreach($days as $time) : 
+          $i++; ?>
+          <?php if($i==4) : ?>
+            <?php if(isset($events)) : ?>
+              <?php foreach($events as $event) : ?>
+                <?php if($event->hour == 1) : ?>
+                  <?php if(date("d", strtotime($event->date)) == $timenumber) :?>
+                    <li class="active">
+                      <time>13h</time>
+                      <div class="info">
+                        <h3>
+                        <?php echo $event->title; ?>
+                        </h3>
+                        <h4>
+                          <?php if(isset($users)) : ?>
+                            <?php foreach($users as $user) : ?>
+                              <?php if($user->id == $event->creator) : ?>
+                                <?php echo $user->firstname . " " . $user->lastname;?>
+                              <?php endif; ?>
+                            <?php endforeach; ?>
+                          <?php endif;?>
+                        </h4>
+                      </div>
+                    </li>
+                  <?php else : ?>
+                    <li></li>
+                  <?php endif; ?>
+                <?php endif; ?>
+              <?php endforeach; ?>
+            <?php endif; ?>
+          <?php endif; ?>
+          <?php if(isset($time['name']) && isset($time['number'])) : $timenumber = $time['number'];?>
             <li class="<?php echo strtolower($time['name']);?>"><?php echo $time['name'] . " " . $time['number'];?></li>
           <?php elseif(isset($time['G'.$SESSION['group']][$SESSION['subgroup']]['course'])) : ?>
             <li class="active">
@@ -141,7 +171,39 @@
           <?php else : ?>
             <li></li>
           <?php endif;?>
-        <?php endforeach;?>
+          <?php if($i==5) : ?>
+            <?php if(isset($events)) : ?>
+              <?php foreach($events as $event) : ?>
+                <?php if($event->hour == 2) : ?>
+                  <?php if(date("d", strtotime($event->date)) == $timenumber) : ?>
+                    <li class="active">
+                      <time>18h</time>
+                      <div class="info">
+                        <h3>
+                        <?php echo $event->title; ?>
+                        </h3>
+                        <h4>
+                          <?php if(isset($users)) : ?>
+                            <?php foreach($users as $user) : ?>
+                              <?php if($user->id == $event->creator) : ?>
+                                <?php echo $user->firstname . " " . $user->lastname;?>
+                              <?php endif; ?>
+                            <?php endforeach; ?>
+                          <?php endif;?>
+                        </h4>
+                        <span class="room">
+                          <?php echo $event->room;?>
+                        </span>
+                      </div>
+                    </li>
+                  <?php else : ?>
+                    <li></li>
+                  <?php endif; ?>
+                <?php endif; ?>
+              <?php endforeach; ?>
+            <?php endif; ?>
+          <?php endif; ?>
+        <?php endforeach; $i=0;?>
       </ul>
       <?php endforeach;?>
     <?php endif;?>
