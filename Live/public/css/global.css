@@ -92,8 +92,8 @@ header {
 
 header .profilPic {
 	float: left;
-	height: 50px;
-	width: 50px;
+	max-height: 50px;
+	max-width: 50px;
 	border-radius: 50%;
 	margin: 0 5%;
 	box-shadow: 1px 2px 2px 0px rgb(20,20,20);
@@ -128,7 +128,7 @@ header a.settings {
 /* LEFT UL */
 
 .leftContent ul {
-	margin: 100px 0;
+	margin: 20px 0;
 	text-align: left;
 }
 
@@ -139,7 +139,7 @@ header a.settings {
 	padding: 10px 10px 10px 10px;
 	background: #1a1a1a;
 	box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.3);
-	max-height: 200px;
+	max-height: 300px;
 	overflow: auto;
 }
 
@@ -154,7 +154,7 @@ header a.settings {
 	text-align: center;
 	background: #2a2a2a;
 	border-radius: 3px;
-	line-height: 25px;
+	line-height: 20px;
 	padding: 5px;
 	margin: 10px 0;
 	z-index: 5;
@@ -586,7 +586,8 @@ footer small {
 		min-width: 60px;
 	}
 	
-	.leftContent ul li {
+	.leftContent ul {
+		margin: 80px 0;
 		font-size: 0;
 	}
 
