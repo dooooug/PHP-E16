@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.5
+-- version 3.4.10.1deb1
 -- http://www.phpmyadmin.net
 --
--- Client :  localhost
--- Généré le :  Mar 04 Mars 2014 à 17:40
--- Version du serveur :  5.6.15
--- Version de PHP :  5.4.24
+-- Client: localhost
+-- Généré le : Ven 07 Mars 2014 à 02:27
+-- Version du serveur: 5.5.35
+-- Version de PHP: 5.3.10-1ubuntu3.9
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de données :  `hetical`
+-- Base de données: `hetical`
 --
 
 -- --------------------------------------------------------
@@ -29,16 +29,26 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `events` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(30) NOT NULL,
-  `description` text NOT NULL,
-  `speaker` varchar(30) NOT NULL,
   `creator` tinyint(4) NOT NULL,
   `room` tinyint(4) NOT NULL,
   `date` date NOT NULL,
-  `hour` time NOT NULL,
+  `hour` tinyint(4) NOT NULL,
   `promo` varchar(2) NOT NULL,
   `priority` tinyint(4) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;
+
+--
+-- Contenu de la table `events`
+--
+
+INSERT INTO `events` (`id`, `title`, `creator`, `room`, `date`, `hour`, `promo`, `priority`) VALUES
+(13, 'Soutient Drupal', 1, 5, '2014-02-20', 2, 'H3', 2),
+(14, 'Soutient SQL', 2, 5, '2014-02-21', 2, 'H3', 2),
+(15, 'Soutient Marketing', 3, 5, '2014-02-22', 2, 'H3', 2),
+(16, 'Soutient PHP', 4, 5, '2014-02-23', 2, 'H3', 2),
+(17, 'Soutient Design', 5, 10, '2014-02-24', 2, 'H3', 2),
+(18, 'Soutient Anglais', 4, 10, '2014-02-21', 1, 'H3', 2);
 
 -- --------------------------------------------------------
 
@@ -66,10 +76,10 @@ INSERT INTO `promos` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `students`
+-- Structure de la table `users`
 --
 
-CREATE TABLE IF NOT EXISTS `students` (
+CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `firstname` varchar(20) NOT NULL,
   `lastname` varchar(20) NOT NULL,
@@ -82,10 +92,10 @@ CREATE TABLE IF NOT EXISTS `students` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
--- Contenu de la table `students`
+-- Contenu de la table `users`
 --
 
-INSERT INTO `students` (`id`, `firstname`, `lastname`, `login`, `password`, `promo`, `group`, `subgroup`) VALUES
+INSERT INTO `users` (`id`, `firstname`, `lastname`, `login`, `password`, `promo`, `group`, `subgroup`) VALUES
 (1, 'Quentin', 'Morisseau', 'quentin.morisseau', 'hetic2016', 'H3', 1, 'A'),
 (2, 'Hugo', 'Leloup', 'hugo.leloup', 'hetic2016', 'H3', 1, 'B'),
 (3, 'Antoine', 'Vidal de la Blache', 'antoine.vidaldelablache', 'hetic2016', 'H3', 2, 'B'),
