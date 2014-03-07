@@ -445,6 +445,14 @@ footer small {
 	border-bottom-right-radius: 0px;*/
 }	
 
+.rightContent li.obligatory {
+	background: linear-gradient(to right, #d46159 15px,#fff 15px);
+}
+
+.rightContent li.optional {
+	background: linear-gradient(to right, #36a271 15px,#fff 15px);
+}
+
 /*
 	.rightContent .active:after {
 		position: absolute;
