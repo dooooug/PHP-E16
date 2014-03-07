@@ -78,18 +78,21 @@ class App_controller extends Controller{
   }
   
   public function getFullSchedule($f3) {
-    $f3->set('program', $this->getSchedule($f3->get('PARAMS.promo'))['H3']);
+    $program = $this->getSchedule($f3->get('PARAMS.promo'));
+    $f3->set('program', $program['H3']);
     $this->tpl['sync']='renderPromo.html';
   }
   
   public function getGroupSchedule($f3) {
-    $f3->set('program', $this->getSchedule($f3->get('PARAMS.promo'))['H3']);
+    $program = $this->getSchedule($f3->get('PARAMS.promo'));
+    $f3->set('program', $program['H3']);
     $f3->set('group', $f3->get('PARAMS.group'));
     $this->tpl['sync']='rendergroup.html';
   }
   
   public function getSupgroupSchedule($f3) {
-    $f3->set('program', $this->getSchedule($f3->get('PARAMS.promo'))['H3']);
+    $program = $this->getSchedule($f3->get('PARAMS.promo'));
+    $f3->set('program', $program['H3']);
     $f3->set('group', $f3->get('PARAMS.group'));
     $f3->set('subgroup', $f3->get('PARAMS.subgroup'));
     $this->tpl['sync']='renderSubgroup.html';
