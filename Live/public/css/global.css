@@ -521,6 +521,21 @@ footer small {
 		line-height: 70px;
 		letter-spacing: -5px;
 }
+
+.rightContent ul li a {
+	font-size: 0;
+}
+
+.rightContent ul li:hover a {
+	font-size: 0;
+	display: block;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	height: 12px;
+	width: 13px;
+	background: url('../img/settings-icon.png') no-repeat;
+}
 	
 .rightContent h2 {
 	font-size: 1.7em;
