@@ -6,7 +6,7 @@ private $f3;
   
  public function __construct(){
    parent::__construct();
-   $this->mapper=$this->getMapper('students');
+   $this->mapper=$this->getMapper('users');
    $this->f3=\Base::instance();
  }
  
@@ -65,7 +65,7 @@ private $f3;
  }
  
  public function getPeople() {
-   return $this->getMapper('students')->find();
+   return $this->getMapper('users')->find();
  }
 }
 ?>
