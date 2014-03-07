@@ -70,7 +70,9 @@ body {
 	font: 13px 'museo_sans', Verdana, sans-serif;
 	color: #fff;
 	height: 100%;
-	background: #dadada;
+	/*background: #dadada;*/
+	background: url('../img/background.png') no-repeat center fixed; 
+	background-size: cover;
 }
 
 /* LEFT CONTENT */
