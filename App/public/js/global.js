@@ -66,7 +66,7 @@ $.getJSON("http://www.reddit.com/r/EarthPorn/new.json?sort=top&t=day&limit=30", 
 			first=table[0];
 			$('.rightContent').css('background', 'url("' + first + '") no-repeat center fixed');
 			$('.rightContent').css('background-size', 'cover');
-			n++
+			n++;
 		}
 		}
 		
