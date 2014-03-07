@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le : Ven 07 Mars 2014 à 13:26
+-- Généré le : Ven 07 Mars 2014 à 13:33
 -- Version du serveur: 5.5.35
 -- Version de PHP: 5.3.10-1ubuntu3.9
 
@@ -101,7 +101,7 @@ INSERT INTO `users` (`id`, `firstname`, `lastname`, `login`, `password`, `promo`
 (3, 'Antoine', 'Vidal de la Blache', 'antoine.vidaldelablache', 'hetic2016', 'H3', 2, 'B'),
 (4, 'Christophe', 'Lepage', 'christophe.lepage', 'hetic2016', 'H3', 2, 'A'),
 (5, 'Kevin', 'Chassagne', 'kevin.chassagne', 'hetic2016', 'H3', 2, 'A'),
-(6, 'François', 'Pumir', 'francois.pumir', 'theboss', 'H3', 2, 'B'),
+(6, 'François', 'Pumir', 'francois.pumir', 'hetic2016', 'H3', 2, 'B'),
 (7, 'Test', 'Test', 'test.test', 'test', 'H3', 1, 'A');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
