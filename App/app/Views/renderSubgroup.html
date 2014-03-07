@@ -1,0 +1,66 @@
+<?php 
+  $times = array('day', 'm1', 'm2', 's1', 's2');
+  $days = array('Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi');
+  $i = 0;
+  $y = 0;
+  $programToDisplay = array();
+  $newProgram = array();
+  foreach($program as $day) {
+    $i = 0;
+    foreach($day as $time) {
+      if( isset($time['G1']) || isset($time['G2']) ) {
+        if($group == 1) {
+          if(isset($time['G1'])) {
+            if($subgroup == 'A' || $subgroup == 'a') {
+              if(isset($time['G1']['A'])) {
+                $programToDisplay[$days[$y]][$times[$i]]['G1']['A'] = $time['G1']['A'];
+              }
+              else {
+                $programToDisplay[$days[$y]][$times[$i]]['G1']['A'] = array();
+              }
+            }
+            elseif($subgroup == 'B' || $subgroup == 'b') {
+              if(isset($time['G1']['B'])) {
+                $programToDisplay[$days[$y]][$times[$i]]['G1']['B'] = $time['G1']['B'];
+              }
+              else {
+                $programToDisplay[$days[$y]][$times[$i]]['G1']['B'] = array();
+              }
+            }
+          }
+          else {
+            $programToDisplay[$days[$y]][$times[$i]]['G1'] = array();
+          }
+        }
+        elseif($group == 2) {
+          if(isset($time['G2'])) {
+            if($subgroup == 'A' || $subgroup == 'a') {
+              if(isset($time['G2']['A'])) {
+                $programToDisplay[$days[$y]][$times[$i]]['G2']['A'] = $time['G2']['A'];
+              }
+              else {
+                $programToDisplay[$days[$y]][$times[$i]]['G2']['A'] = array();
+              }
+            }
+            elseif($subgroup == 'B' || $subgroup == 'b') {
+              if(isset($time['G2']['B'])) {
+                $programToDisplay[$days[$y]][$times[$i]]['G2']['B'] = $time['G2']['B'];
+              }
+              else {
+                $programToDisplay[$days[$y]][$times[$i]]['G2']['B'] = array();
+              }
+            }
+          }
+          else {
+            $programToDisplay[$days[$y]][$times[$i]]['G2'] = array();
+          }
+        }
+      }
+      $i++;
+      $programToDisplay[$days[$y]]['day'] = $day['day'];
+    }
+    $y++;
+  }
+  print_r(json_encode($programToDisplay));
+    
+?>

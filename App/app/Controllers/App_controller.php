@@ -76,5 +76,28 @@ class App_controller extends Controller{
       break;
     }
   }
+  
+  public function getFullSchedule($f3) {
+    $f3->set('program', $this->getSchedule($f3->get('PARAMS.promo'))['H3']);
+    $this->tpl['sync']='renderPromo.html';
+  }
+  
+  public function getGroupSchedule($f3) {
+    $f3->set('program', $this->getSchedule($f3->get('PARAMS.promo'))['H3']);
+    $f3->set('group', $f3->get('PARAMS.group'));
+    $this->tpl['sync']='rendergroup.html';
+  }
+  
+  public function getSupgroupSchedule($f3) {
+    $f3->set('program', $this->getSchedule($f3->get('PARAMS.promo'))['H3']);
+    $f3->set('group', $f3->get('PARAMS.group'));
+    $f3->set('subgroup', $f3->get('PARAMS.subgroup'));
+    $this->tpl['sync']='renderSubgroup.html';
+  }
+  
+  public function getSchedule($promo){
+    $program = $this->model->getJson(array('promo'=>$promo));
+    return $program;
+  }
 }
 ?>
