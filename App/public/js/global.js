@@ -1,20 +1,3 @@
-$(document).ready(function() {
-
-/* WINDOW HEIGHT */
-
-/*
-resizeContent();
-	
-$(window).resize(function() {
-        resizeContent();
-    });
-
-function resizeContent() {
-    $height = $(window).height();
-    $('.rightContent').height($height);
-}
-*/
-
 /* DATE */
 var date  = new Date;
 var moi   = date.getMonth();
@@ -35,19 +18,22 @@ $('html, body').animate({
 }, 1000);
 
 /* LEFT UL */
-$('.leftContent ul li:nth-child(1)').click(function() {
-	$(this).children('.toggle').slideToggle(400);
-	$(this).siblings().children('.toggle').slideUp(400);
-});
+var allPanels = $('.leftContent nav > ul > li > .toggle').hide(); 
+var firstLink = $('.leftContent nav > ul > li > a');
+  
+firstLink.click(function() {
+  $this = $(this);
+  $target =  $this.next();
 
-$('.leftContent ul li:nth-child(3)').click(function() {
-	$(this).children('.toggle').slideToggle(400);
-	$(this).siblings().children('.toggle').slideUp(400);
-});
+  if(!$target.hasClass('active')){
+    allPanels.removeClass('active').slideUp();
+    firstLink.removeClass('down');
 
-$('.leftContent ul li:nth-child(2) a').click(function() {
-	$(this).next('.toggle').slideToggle(400);
-	return false;
+    $target.addClass('active').slideDown();
+    $target.parent().find('a:first').addClass('down');
+  }
+  
+return false;
 });
 
 /* WEATHER */
@@ -65,4 +51,16 @@ $.simpleWeather({
 	}
 });
 
+/* API REDDIT */
+$.getJSON("http://www.reddit.com/r/EarthPorn/new.json?sort=top&t=day&limit=1", function(json) {
+	var backgroundContent = json.data.children[0].data.url;
+	console.log(backgroundContent);
+	$('.rightContent').css('background', 'url("' + backgroundContent + '") no-repeat center fixed');
+	$('.rightContent').css('background-position', 'cover');
 });
+
+/* POPIN */
+$('.close').click(function() {
+  $('#popin').css('display', 'none');
+});
+

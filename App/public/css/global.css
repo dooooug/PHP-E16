@@ -70,8 +70,7 @@ body {
 	font: 13px 'museo_sans', Verdana, sans-serif;
 	color: #fff;
 	height: 100%;
-	background: url('../img/background.png') no-repeat center fixed;
-	background-size: cover;
+	background: #dadada;
 }
 
 /* LEFT CONTENT */
@@ -93,8 +92,8 @@ header {
 
 header .profilPic {
 	float: left;
-	height: 50px;
-	width: 50px;
+	max-height: 50px;
+	max-width: 50px;
 	border-radius: 50%;
 	margin: 0 5%;
 	box-shadow: 1px 2px 2px 0px rgb(20,20,20);
@@ -129,8 +128,14 @@ header a.settings {
 /* LEFT UL */
 
 .leftContent ul {
-	margin: 100px 0;
+	margin: 20px 0;
 	text-align: left;
+}
+
+.leftContent ul li a {
+	display: inline-block;
+	height: 50px;
+	width: 75%;
 }
 
 /* TOGGLE */
@@ -140,7 +145,7 @@ header a.settings {
 	padding: 10px 10px 10px 10px;
 	background: #1a1a1a;
 	box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.3);
-	max-height: 200px;
+	max-height: 300px;
 	overflow: auto;
 }
 
@@ -155,7 +160,7 @@ header a.settings {
 	text-align: center;
 	background: #2a2a2a;
 	border-radius: 3px;
-	line-height: 25px;
+	line-height: 20px;
 	padding: 5px;
 	margin: 10px 0;
 	z-index: 5;
@@ -185,7 +190,7 @@ header a.settings {
 	margin: 0 auto;
 }
 
-.event form input, .event select {
+.event form input {
     display: block;
     width: 100%;
 	color: #bfbfbf;
@@ -197,10 +202,8 @@ header a.settings {
     margin: 15px auto 0 auto;
     padding-bottom: 3px;
 	border-bottom: 1px solid #bfbfbf;
-	-webkit-appearance: none;
-       -moz-appearance: none;
 }
-.event form input:focus, .event select:focus {
+.event form input:focus {
 	outline: none;
 	border-bottom: 1px solid #fff;
 }
@@ -219,13 +222,12 @@ header a.settings {
 	border: none;
 	-webkit-box-sizing: content-box;
 	   -moz-box-sizing: content-box;
-	        box-sizing: content-box;
+	        box-sizing: content-box;  
 }
 
 	.event form input[type="submit"]:hover, .event form input[type="submit"]:focus { 
 		outline: none;
 		border: none;
-		cursor: pointer;
 	}
 
 /* SYNCRO*/
@@ -320,7 +322,7 @@ footer small {
 	}
 
 		footer small span strong {
-			font-weight: 300;
+			font-weight: 500;
 		}
 
 .leftContent time {
@@ -394,40 +396,37 @@ footer small {
 	text-align: center;
 	min-height: 100%;
 	width: 80%;
-	background: #dadada;
 	box-shadow: inset 10px 0px 5px -10px rgba(0,0,0,0.8);
-	/*
-	background: url('../img/background.png') no-repeat center fixed;
-	background-size: cover;
-	*/
 }
 
 .rightContent ul {
 	margin: 0 0 2% 0;
-	width: 180px;
+	min-width: 180px;
+	width: 19%;
 	display: inline-block;
 	vertical-align: top;
 }
 
 .rightContent ul li:nth-child(1) {
+	height: 50px;
 	font-size: 1.5em;
 	font-weight: 100;
 	text-align: center;
-	line-height: 135px;
+	line-height: 90px;
 	text-transform: uppercase;
 	background: none;
 	box-shadow: inherit;
 }
 
 .rightContent ul li {
-	height: 70px;
-	margin: 10px 5px;
+	height: 6vw;
+	margin: 5% 5%;
 	border-radius: 3px;
 	background: rgba(255,255,255,0.3);
 	box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;  
+	        box-sizing: border-box;
 }
 
 .rightContent li.active { 
@@ -439,10 +438,11 @@ footer small {
 	background: #fff;
 	cursor: pointer;
 	background: linear-gradient(to right, #0097bd 15px,#fff 15px);
-	box-shadow: 0px 3px 0px #015368;
-	border-bottom-right-radius: 0px;
+/*	box-shadow: 0px 3px 0px #015368;
+	border-bottom-right-radius: 0px;*/
 }	
 
+/*
 	.rightContent .active:after {
 		position: absolute;
 		bottom: -3px;
@@ -460,14 +460,42 @@ footer small {
 		content: '';
 		display: block;
 		height: 3px;
-		width: 155px;
+		min-width: 92%;
   	  	background: #ededed;
   	  	border-bottom-right-radius: 0px;
+	}*/
+
+
+/*	
+	.rightContent .active:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		content: '';
+		display: block;
+		height: 100%;
+		width: 15px;
+		background: #0097bd;
+		border-top-left-radius: 3px;
 	}
 
-.rightContent li.active .info {
-	display: block;
-	height: 40px;
+	.rightContent .active:after {
+		position: absolute;
+		bottom: -3px;
+		left: 2px;
+		content: '';
+		display: block;
+		height: 3px;
+		width: 98%;
+	    background: linear-gradient(to right, #015368 15px,#dedede 15px);
+	    box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+		-webkit-transform: skewX(45deg);	
+	}
+*/
+
+.rightContent li.active time:nth-of-type(2) {
+	position: absolute;
+	bottom: 0;
 }
 
 .rightContent li.active h3 {
@@ -511,80 +539,62 @@ footer small {
 
 /* LOGIN PAGE */
 
-.loginPage {
-	height: 280px;
-	width: 25%;
+.loginPage h1 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.loginPage form {
+	height: 200px;
+	width: 30%;
 	min-width: 300px;
 	position: absolute;
 	left: 0; right: 0; top: 0; bottom: 0;
 	margin: auto auto;
-}
-
-.loginPage h1 {
-	text-align: center;
-	text-transform: uppercase;
-	font-size: 4em;
-	font-weight: 100;
-	margin-bottom: 10%;
-}
-
-	.loginPage h1 span {
-		font-weight: 700;
-	}
-
-.loginPage label {
-	text-transform: uppercase;
-	font-weight: 300;
+	border-radius: 5px;
+	background: #fff; 
+	box-shadow:15px 15px 0px rgba(0,0,0,.1);
 }
 
 .loginPage form input {
 	display: block;
-	margin: 10px auto;
+	margin: 20px auto;
 	padding-left: 10px;
-	height: 35px;
-	width: 100%;
+	height: 30px;
+	width: 90%;
 	color: #888;
 	border: none;
 	border-radius: 5px;
 	background: #dedede;
-	box-shadow: inset 1px 1px 1px 0px #656565; 
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;   
 }
 
 .loginPage form input[type="submit"] {
 	font-size :1.2em;
   	color: #fff;
-  	text-transform: uppercase;
-  	font-weight: 300;
   	text-shadow: 1px 1px 0px rgba(0,0,0,.1);
 	height: 50px;
+	line-height: 50px;
 	border: none;
   	border-radius: 5px;
- 	background: #4a9041;
-  	box-shadow: 0px 3px 0px #396e00;
-  	-webkit-appearance: none;
-       -moz-appearance: none;
+ 	background :#f26964;
+  	box-shadow: 0px 3px 0px #c1524e;
 }
 
 	.loginPage form input[type="submit"]:hover {
-		margin-top: 12px;
-		box-shadow: 0px 1px 0px #396e00;
+		margin-top: 22px;
+		box-shadow: 0px 1px 0px #c1524e;
 	} 
 
 /* POPIN */
 
 #popin {
-	display: none;
-	display: none;
 	position: absolute;
 	height: 100%;
 	width: 100%;
 	background: rgba(0,0,0,0.7);
 }
 
-#popin .edit {
+#popin .popinBloc {
 	position: absolute;
 	height: 50%;
 	width: 40%;
@@ -594,7 +604,7 @@ footer small {
 	background: #fff;
 }
 
-.edit a {
+.popinBloc a.close {
 	display: block;
 	height: 20px;
 	width: 35px;
@@ -606,7 +616,7 @@ footer small {
 	background: #0097bd;
 }
 
-.edit a:after {
+.popinBloc a.close:after {
 	content: '';
 	display: block;
 	height: 10px;

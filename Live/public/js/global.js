@@ -59,3 +59,8 @@ $.getJSON("http://www.reddit.com/r/EarthPorn/new.json?sort=top&t=day&limit=1", f
 	$('.rightContent').css('background-position', 'cover');
 });
 
+/* POPIN */
+$('.close').click(function() {
+  $('#popin').css('display', 'none');
+});
+

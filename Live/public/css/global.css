@@ -437,7 +437,6 @@ footer small {
 	font-weight: 300;
 	background: #fff;
 	cursor: pointer;
-	z-index: 9999;
 	background: linear-gradient(to right, #0097bd 15px,#fff 15px);
 /*	box-shadow: 0px 3px 0px #015368;
 	border-bottom-right-radius: 0px;*/
@@ -589,15 +588,13 @@ footer small {
 /* POPIN */
 
 #popin {
-	display: none;
-	display: none;
 	position: absolute;
 	height: 100%;
 	width: 100%;
 	background: rgba(0,0,0,0.7);
 }
 
-#popin .edit {
+#popin .popinBloc {
 	position: absolute;
 	height: 50%;
 	width: 40%;
@@ -607,7 +604,7 @@ footer small {
 	background: #fff;
 }
 
-.edit a {
+.popinBloc a.close {
 	display: block;
 	height: 20px;
 	width: 35px;
@@ -619,7 +616,7 @@ footer small {
 	background: #0097bd;
 }
 
-.edit a:after {
+.popinBloc a.close:after {
 	content: '';
 	display: block;
 	height: 10px;
