@@ -65,15 +65,13 @@ $.getJSON("http://www.reddit.com/r/EarthPorn/new.json?sort=top&t=day&limit=30", 
 			table[n]=(this.src);
 			first=table[0];
 			$('.rightContent').css('background', 'url("' + first + '") no-repeat center fixed');
-			$('.rightContent').css('background-position', 'cover');
-			n++
+			$('.rightContent').css('background-size', 'cover');
+			n++;
 		}
 		}
 		
 		img.src = json.data.children[i].data.url;
 	}
-	
-
 });
 
 /* POPIN */

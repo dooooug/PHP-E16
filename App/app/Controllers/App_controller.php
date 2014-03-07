@@ -87,7 +87,7 @@ class App_controller extends Controller{
     $program = $this->getSchedule($f3->get('PARAMS.promo'));
     $f3->set('program', $program['H3']);
     $f3->set('group', $f3->get('PARAMS.group'));
-    $this->tpl['sync']='rendergroup.html';
+    $this->tpl['sync']='renderGroup.html';
   }
   
   public function getSupgroupSchedule($f3) {

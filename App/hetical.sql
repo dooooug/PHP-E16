@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le : Ven 07 Mars 2014 à 02:27
+-- Généré le : Ven 07 Mars 2014 à 10:48
 -- Version du serveur: 5.5.35
 -- Version de PHP: 5.3.10-1ubuntu3.9
 
@@ -36,19 +36,19 @@ CREATE TABLE IF NOT EXISTS `events` (
   `promo` varchar(2) NOT NULL,
   `priority` tinyint(4) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
 
 --
 -- Contenu de la table `events`
 --
 
 INSERT INTO `events` (`id`, `title`, `creator`, `room`, `date`, `hour`, `promo`, `priority`) VALUES
-(13, 'Soutient Drupal', 1, 5, '2014-02-20', 2, 'H3', 2),
-(14, 'Soutient SQL', 2, 5, '2014-02-21', 2, 'H3', 2),
-(15, 'Soutient Marketing', 3, 5, '2014-02-22', 2, 'H3', 2),
-(16, 'Soutient PHP', 4, 5, '2014-02-23', 2, 'H3', 2),
-(17, 'Soutient Design', 5, 10, '2014-02-24', 2, 'H3', 2),
-(18, 'Soutient Anglais', 4, 10, '2014-02-21', 1, 'H3', 2);
+(13, 'Soutien Drupal', 1, 5, '2014-02-20', 2, 'H3', 2),
+(14, 'Soutien SQL', 2, 5, '2014-02-21', 2, 'H3', 2),
+(15, 'Soutien Marketing', 3, 5, '2014-02-22', 2, 'H3', 1),
+(16, 'Soutien PHP', 4, 5, '2014-02-23', 2, 'H3', 2),
+(17, 'Soutien Design', 5, 10, '2014-02-24', 2, 'H3', 2),
+(18, 'Soutien Anglais', 4, 10, '2014-02-21', 1, 'H3', 2);
 
 -- --------------------------------------------------------
 

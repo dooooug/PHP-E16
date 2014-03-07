@@ -117,14 +117,14 @@ header .profilPic {
 	text-transform: uppercase;
 }
 
-header a.settings {
+header a.logout {
 	display: inline-block;
 	color: #fff;
 	text-decoration: none;
 }
 
-	header a.settings:hover {
-		background: url('../img/settings-icon.png') 58px 31px no-repeat;
+	header a.logout:hover {
+		background: url('../img/logout-icon.png') 58px 31px no-repeat;
 	}
 
 /* LEFT UL */
@@ -422,6 +422,7 @@ footer small {
 	text-transform: uppercase;
 	background: none;
 	box-shadow: inherit;
+  color: white;
 }
 
 .rightContent ul li {
@@ -567,7 +568,9 @@ footer small {
 
 .rightContent h2 {
 	font-size: 1.7em;
-	font-weight: 300;
+	font-weight: 100;
+  color: white;
+  /*text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;*/
 }
 
 	.rightContent h2 span {

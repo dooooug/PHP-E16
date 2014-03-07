@@ -60,7 +60,7 @@ private $f3;
  }
  
  public function getJson($params){
-   $string = file_get_contents("public/json/".$params['promo'].".json");
+   $string = file_get_contents("public/json/".strtolower($params['promo']).".json");
    return json_decode($string,true);
  }
  
