@@ -61,6 +61,6 @@ $.getJSON("http://www.reddit.com/r/EarthPorn/new.json?sort=top&t=day&limit=1", f
 
 /* POPIN */
 $('.close').click(function() {
-  $('#popin').css('display', 'none');
+  $('#popin').hide();
 });
 
