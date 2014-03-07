@@ -192,7 +192,7 @@ header a.logout {
 	margin: 0 auto;
 }
 
-.event form input, .event select {
+.event form input, .event select, .popinBloc form input, .popinBloc select {
     display: block;
     width: 100%;
 	color: #bfbfbf;
@@ -201,18 +201,19 @@ header a.logout {
 	border-top: none;
 	border-left: none;
 	border-right: none;
+	border-radius: inherit;
     margin: 15px auto 0 auto;
     padding-bottom: 3px;
 	border-bottom: 1px solid #bfbfbf;
 	-webkit-appearance: none;
        -moz-appearance: none;
 }
-.event form input:focus, .event select:focus {
+.event form input:focus, .event select:focus, .popinBloc form input:focus, .popinBloc select:focus {
 	outline: none;
 	border-bottom: 1px solid #fff;
 }
 
-.event form input[type="submit"] { 
+.event form input[type="submit"], .popinBloc form input[type="submit"] { 
 	font-weight: 700;
 	font-size: 1.4em;
 	margin: 20px auto 0 auto;
@@ -229,10 +230,14 @@ header a.logout {
 	        box-sizing: content-box;
 }
 
-	.event form input[type="submit"]:hover, .event form input[type="submit"]:focus { 
+	.event form input[type="submit"]:focus, .popinBloc form input[type="submit"]:focus { 
 		outline: none;
 		border: none;
+	}
+
+	.popinBloc form input[type="submit"]:hover, .event form input[type="submit"]:hover {
 		cursor: pointer;
+		box-shadow: inset 0px 1px 1px 0px #191919;
 	}
 
 /* SYNCRO*/
@@ -661,6 +666,7 @@ footer small {
 
 #popin .popinBloc {
 	position: absolute;
+	min-width: 300px;
 	height: 50%;
 	width: 40%;
 	top: 0; bottom: 0; left: 0; right: 0;
@@ -669,16 +675,23 @@ footer small {
 	background: url('../img/pattern.png'), #252525;
 }
 
+.popinBloc h1 {
+	text-align: center;
+	margin: 15px 0 0 0;
+	text-transform: uppercase;
+	font-weight: 100;
+	font-size: 1.1em
+}
+
 .popinBloc a.close {
 	display: block;
 	height: 20px;
 	width: 35px;
 	font-size: 0;
 	float: right;
-	margin: 20px 0 0 0;
 	border-bottom-left-radius: 15px;
 	border-top-left-radius: 15px;
-	background: #d46159;
+	background: #dadada;
 }
 
 .popinBloc a.close:after {
@@ -695,12 +708,38 @@ footer small {
 
 }
 
-	.edit a:hover:after {
+	.popinBloc a:hover:after {
 		-webkit-transform: rotate(180deg);
 		   -moz-transform: rotate(180deg);
 			 -o-transform: rotate(180deg);
 			 	transform: rotate(180deg);
 	}
+
+.popinBloc form {
+	width: 80%;
+	margin: 7% auto;
+}
+
+.popinBloc form input[type="submit"] {
+	color: #fff;
+	display: inline-block;
+	font-size: 1em;
+	font-weight: 300;
+	width: 100px;
+	margin: 20px 0 0 0;
+}
+
+.popinBloc form input[name="edit"] {
+	float: right;
+	background: #36a271;
+	box-shadow: inset 0px 1px 1px 0px #3CB57E;
+}
+
+.popinBloc form input[name="delete"] {
+	float: left;
+	background: #d46159;
+	box-shadow: inset 0px 1px 1px 0px #FF756B;
+}
 
 /* MEDIA QUERIES */
 
