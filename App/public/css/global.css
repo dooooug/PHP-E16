@@ -449,10 +449,24 @@ footer small {
 }	
 
 .rightContent li.obligatory {
+	position: relative;
+	text-align: left;
+	padding: 3px 17px;
+	color: #454545;
+	font-weight: 300;
+	background: #fff;
+	cursor: pointer;
 	background: linear-gradient(to right, #d46159 15px,#fff 15px);
 }
 
 .rightContent li.optional {
+	position: relative;
+	text-align: left;
+	padding: 3px 17px;
+	color: #454545;
+	font-weight: 300;
+	background: #fff;
+	cursor: pointer;
 	background: linear-gradient(to right, #36a271 15px,#fff 15px);
 }
 
@@ -512,12 +526,12 @@ footer small {
 	bottom: 0;
 }
 
-.rightContent li.active h3 {
+.rightContent li.active h3, .rightContent li.optional h3, .rightContent li.obligatory h3 {
 		color: #000;
 		margin: 0 0 0 20px;
 }
 	
-.rightContent li.active h4 {
+.rightContent li.active h4, .rightContent li.optional h4, .rightContent li.obligatory h4 {
 		font-size: 11px;
 		color: #454545;
 		text-transform: uppercase;

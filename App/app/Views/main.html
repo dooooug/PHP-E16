@@ -127,7 +127,11 @@
                 <?php if($event->hour == 1) : ?>
                   <!-- Si cet évent a lieu le bon jour -->
                   <?php if(date("d", strtotime($event->date)) == $timenumber) : $created=true;?>
-                    <li class="active">
+                    <?php if($event->priority == 1) : ?>
+                      <li class="obligatory">
+                    <?php else : ?>
+                      <li class="optional">
+                    <?php endif; ?>
                       <time>13h</time>
                       <div class="info">
                         <h3>
@@ -196,7 +200,11 @@
                 <?php if($event->hour == 2) : ?>
                   <!-- Si cet évent a lieu le bon jour -->
                   <?php if(date("d", strtotime($event->date)) == $timenumber) : $created=true;?>
-                    <li class="active">
+                    <?php if($event->priority == 1) : ?>
+                      <li class="obligatory">
+                    <?php else : ?>
+                      <li class="optional">
+                    <?php endif; ?>
                       <time>18h</time>
                       <div class="info">
                         <h3>
