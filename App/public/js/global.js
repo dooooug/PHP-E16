@@ -52,11 +52,28 @@ $.simpleWeather({
 });
 
 /* API REDDIT */
-$.getJSON("http://www.reddit.com/r/EarthPorn/new.json?sort=top&t=day&limit=1", function(json) {
-	var backgroundContent = json.data.children[0].data.url;
-	console.log(backgroundContent);
-	$('.rightContent').css('background', 'url("' + backgroundContent + '") no-repeat center fixed');
-	$('.rightContent').css('background-position', 'cover');
+$.getJSON("http://www.reddit.com/r/EarthPorn/new.json?sort=top&t=day&limit=30", function(json) {
+	n=0;
+	var table = [];
+	var first;
+	
+	for(i=0; i<30 ;i++)
+	{ 
+		var img = new Image();
+		img.onload = function() {
+			if (this.width>1900 && this.width>this.height && this.height>1024){
+			table[n]=(this.src);
+			first=table[0];
+			$('.rightContent').css('background', 'url("' + first + '") no-repeat center fixed');
+			$('.rightContent').css('background-position', 'cover');
+			n++
+		}
+		}
+		
+		img.src = json.data.children[i].data.url;
+	}
+	
+
 });
 
 /* POPIN */
