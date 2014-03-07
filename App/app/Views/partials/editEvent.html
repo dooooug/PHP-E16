@@ -1,11 +1,12 @@
 <form action="event/<?php echo $event->id;?>" id="editEvent" method="POST">
   <input type="text" name="title" value="<?php echo $event->title;?>" />
-  <textarea><?php echo $event->description;?></textarea>
-  <input type="text" name="speaker" value="<?php echo $event->speaker;?>" />
   <input type="text" name="creator" value="<?php echo $event->creator;?>" />
   <input type="text" name="room" value="<?php echo $event->room;?>" />
   <input type="date" name="date" value="<?php echo $event->date;?>" />
-  <input type="time" name="hour" value="<?php echo $event->hour;?>" />
+  <select name="hour">
+      <option value="1" <?php if($event->hour == 1) : ?> selected <?php endif;?> >13h</option>
+      <option value="2" <?php if($event->hour == 1) : ?> selected <?php endif;?> >18h</option>
+  </select>
   <select name="promo">
     <?php if(isset($promos)) :
       foreach($promos as $promo) : 
