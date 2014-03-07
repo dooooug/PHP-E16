@@ -444,7 +444,6 @@ footer small {
 }
 
 .rightContent li.active { 
-	font-size: 100%;
 	position: relative;
 	text-align: left;
 	padding: 3px 17px;
@@ -753,19 +752,20 @@ footer small {
 	}
 	
 	.leftContent ul {
-		margin: 80px 0;
-		font-size: 0;
-	}
-	
-	.leftContent ul li a {
 		display: none;
 	}
 	
 	.rightContent {
 		width: 94%;
+		background: url('../img/background.png') no-repeat center fixed; 
+		background-size: cover;
 	}
 	
-	header h1, header h2, header a.settings, .leftContent time {
+	header h2 {
+		margin: 10px 0 0 -45px;
+	}
+	
+	header h1, header a.settings, .leftContent time {
 		display: none;
 	}
 
