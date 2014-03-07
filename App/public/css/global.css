@@ -90,6 +90,7 @@ body {
 
 header { 
 	text-align: left;
+	margin-left: 50px;
 }
 
 header .profilPic {
@@ -443,6 +444,7 @@ footer small {
 }
 
 .rightContent li.active { 
+	font-size: 100%;
 	position: relative;
 	text-align: left;
 	padding: 3px 17px;
