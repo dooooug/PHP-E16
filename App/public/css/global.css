@@ -128,8 +128,14 @@ header a.settings {
 /* LEFT UL */
 
 .leftContent ul {
-	margin: 100px 0;
+	margin: 20px 0;
 	text-align: left;
+}
+
+.leftContent ul li a {
+	display: inline-block;
+	height: 50px;
+	width: 75%;
 }
 
 /* TOGGLE */
@@ -139,7 +145,7 @@ header a.settings {
 	padding: 10px 10px 10px 10px;
 	background: #1a1a1a;
 	box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.3);
-	max-height: 200px;
+	max-height: 300px;
 	overflow: auto;
 }
 
@@ -154,7 +160,7 @@ header a.settings {
 	text-align: center;
 	background: #2a2a2a;
 	border-radius: 3px;
-	line-height: 25px;
+	line-height: 20px;
 	padding: 5px;
 	margin: 10px 0;
 	z-index: 5;
