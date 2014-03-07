@@ -23,7 +23,7 @@ private $f3;
  }
  
  public function getEvents($params){
-   return $this->getMapper('events')->find(array('promo=?', $params['promo']));
+   return $this->getMapper('events')->find(array('promo=?', $params['promo']), array('order'=>'id DESC'));
  }
  
  public function getEvent($params){
