@@ -426,6 +426,7 @@ footer small {
 }
 
 .rightContent ul li {
+	min-height: 70px;
 	height: 6vw;
 	margin: 5% 5%;
 	border-radius: 3px;
@@ -665,7 +666,7 @@ footer small {
 	top: 0; bottom: 0; left: 0; right: 0;
 	margin: auto auto;
 	border-radius: 10px;
-	background: #fff;
+	background: url('../img/pattern.png'), #252525;
 }
 
 .popinBloc a.close {
@@ -677,7 +678,7 @@ footer small {
 	margin: 20px 0 0 0;
 	border-bottom-left-radius: 15px;
 	border-top-left-radius: 15px;
-	background: #0097bd;
+	background: #d46159;
 }
 
 .popinBloc a.close:after {
