@@ -92,8 +92,8 @@ header {
 
 header .profilPic {
 	float: left;
-	max-height: 50px;
-	max-width: 50px;
+	height: 50px;
+	width: 50px;
 	border-radius: 50%;
 	margin: 0 5%;
 	box-shadow: 1px 2px 2px 0px rgb(20,20,20);
@@ -128,14 +128,8 @@ header a.settings {
 /* LEFT UL */
 
 .leftContent ul {
-	margin: 20px 0;
+	margin: 100px 0;
 	text-align: left;
-}
-
-.leftContent ul li a {
-	display: inline-block;
-	height: 50px;
-	width: 75%;
 }
 
 /* TOGGLE */
@@ -145,7 +139,7 @@ header a.settings {
 	padding: 10px 10px 10px 10px;
 	background: #1a1a1a;
 	box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.3);
-	max-height: 300px;
+	max-height: 200px;
 	overflow: auto;
 }
 
@@ -160,7 +154,7 @@ header a.settings {
 	text-align: center;
 	background: #2a2a2a;
 	border-radius: 3px;
-	line-height: 20px;
+	line-height: 25px;
 	padding: 5px;
 	margin: 10px 0;
 	z-index: 5;
@@ -190,7 +184,7 @@ header a.settings {
 	margin: 0 auto;
 }
 
-.event form input {
+.event form input, .event select {
     display: block;
     width: 100%;
 	color: #bfbfbf;
@@ -202,8 +196,10 @@ header a.settings {
     margin: 15px auto 0 auto;
     padding-bottom: 3px;
 	border-bottom: 1px solid #bfbfbf;
+	-webkit-appearance: none;
+       -moz-appearance: none;
 }
-.event form input:focus {
+.event form input:focus, .event select:focus {
 	outline: none;
 	border-bottom: 1px solid #fff;
 }
@@ -222,12 +218,13 @@ header a.settings {
 	border: none;
 	-webkit-box-sizing: content-box;
 	   -moz-box-sizing: content-box;
-	        box-sizing: content-box;  
+	        box-sizing: content-box;
 }
 
 	.event form input[type="submit"]:hover, .event form input[type="submit"]:focus { 
 		outline: none;
 		border: none;
+		cursor: pointer;
 	}
 
 /* SYNCRO*/
@@ -322,7 +319,7 @@ footer small {
 	}
 
 		footer small span strong {
-			font-weight: 500;
+			font-weight: 300;
 		}
 
 .leftContent time {
@@ -539,50 +536,66 @@ footer small {
 
 /* LOGIN PAGE */
 
-.loginPage h1 {
-	text-align: center;
-	text-transform: uppercase;
-}
-
-.loginPage form {
-	height: 200px;
-	width: 30%;
+.loginPage {
+	height: 280px;
+	width: 25%;
 	min-width: 300px;
 	position: absolute;
 	left: 0; right: 0; top: 0; bottom: 0;
 	margin: auto auto;
-	border-radius: 5px;
-	background: #fff; 
-	box-shadow:15px 15px 0px rgba(0,0,0,.1);
+}
+
+.loginPage h1 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 4em;
+	font-weight: 100;
+	margin-bottom: 10%;
+}
+
+	.loginPage h1 span {
+		font-weight: 700;
+	}
+
+.loginPage label {
+	text-transform: uppercase;
+	font-weight: 300;
 }
 
 .loginPage form input {
 	display: block;
-	margin: 20px auto;
+	margin: 10px auto;
 	padding-left: 10px;
-	height: 30px;
-	width: 90%;
+	height: 35px;
+	width: 100%;
 	color: #888;
 	border: none;
 	border-radius: 5px;
 	background: #dedede;
+	box-shadow: inset 1px 1px 1px 0px #656565; 
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;   
 }
 
 .loginPage form input[type="submit"] {
 	font-size :1.2em;
   	color: #fff;
+  	text-transform: uppercase;
+  	font-weight: 300;
   	text-shadow: 1px 1px 0px rgba(0,0,0,.1);
 	height: 50px;
-	line-height: 50px;
 	border: none;
   	border-radius: 5px;
- 	background :#f26964;
-  	box-shadow: 0px 3px 0px #c1524e;
+ 	background: #4a9041;
+  	box-shadow: 0px 3px 0px #396e00;
+  	-webkit-appearance: none;
+       -moz-appearance: none;
 }
 
 	.loginPage form input[type="submit"]:hover {
-		margin-top: 22px;
-		box-shadow: 0px 1px 0px #c1524e;
+		margin-top: 12px;
+		box-shadow: 0px 1px 0px #396e00;
 	} 
 
 /* POPIN */
