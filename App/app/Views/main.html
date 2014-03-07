@@ -146,7 +146,7 @@
                           <?php echo $event->room;?>
                         </span>
                         <?php if($event->creator == $SESSION['id']) :?>
-                          <a href="#" class="edit">Edit</a>
+                          <a href="event/<?php echo $event->id; ?>" class="edit">Edit</a>
                         <?php endif; ?>
                       </div>
                     </li>
@@ -237,7 +237,7 @@
     <?php endif;?>
       <h2>Semaine</h2>
     </section>
-    <section id="popin" class="close">
+    <section id="popin">
       <div class="popinBloc">
         <a href="#" class="close">Fermer</a>
         <div id="edit"></div>

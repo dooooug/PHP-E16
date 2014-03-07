@@ -5,7 +5,7 @@
   <input type="date" name="date" value="<?php echo $event->date;?>" />
   <select name="hour">
       <option value="1" <?php if($event->hour == 1) : ?> selected <?php endif;?> >13h</option>
-      <option value="2" <?php if($event->hour == 1) : ?> selected <?php endif;?> >18h</option>
+      <option value="2" <?php if($event->hour == 2) : ?> selected <?php endif;?> >18h</option>
   </select>
   <select name="promo">
     <?php if(isset($promos)) :
