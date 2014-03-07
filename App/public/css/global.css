@@ -117,14 +117,14 @@ header .profilPic {
 	text-transform: uppercase;
 }
 
-header a.settings {
+header a.logout {
 	display: inline-block;
 	color: #fff;
 	text-decoration: none;
 }
 
-	header a.settings:hover {
-		background: url('../img/settings-icon.png') 58px 31px no-repeat;
+	header a.logout:hover {
+		background: url('../img/logout-icon.png') 58px 31px no-repeat;
 	}
 
 /* LEFT UL */
