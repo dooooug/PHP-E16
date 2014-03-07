@@ -33,7 +33,7 @@ private $f3;
  public function addEvent(){
    $mapper = $this->getEventMapper();
    $mapper->copyFrom('POST',function($val) {
-       return array_intersect_key($val, array_flip(array('title','description','speaker','creator','room','date','hour','promo','priority')));
+       return array_intersect_key($val, array_flip(array('title','creator','room','date','hour','promo','priority')));
    });
    $mapper->save();
  }
@@ -42,7 +42,7 @@ private $f3;
    $mapper = $this->getEventMapper();
    $mapper->load(array('id=?',$params['id']));
    $mapper->copyFrom('POST',function($val) {
-       return array_intersect_key($val, array_flip(array('title','description','speaker','creator','room','date','hour','promo','priority')));
+       return array_intersect_key($val, array_flip(array('title','creator','room','date','hour','promo','priority')));
    });
    $mapper->update();
  }
