@@ -50,3 +50,12 @@ $.simpleWeather({
 		$("#weather").html('<p>'+error+'</p>');
 	}
 });
+
+/* API REDDIT */
+$.getJSON("http://www.reddit.com/r/EarthPorn/new.json?sort=top&t=day&limit=1", function(json) {
+	var backgroundContent = json.data.children[0].data.url;
+	console.log(backgroundContent);
+	$('.rightContent').css('background', 'url("' + backgroundContent + '") no-repeat center fixed');
+	$('.rightContent').css('background-position', 'cover');
+});
+

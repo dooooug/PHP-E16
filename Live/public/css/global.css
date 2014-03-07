@@ -70,7 +70,7 @@ body {
 	font: 13px 'museo_sans', Verdana, sans-serif;
 	color: #fff;
 	height: 100%;
-	background: #63b47a;
+	background: #dadada;
 }
 
 /* LEFT CONTENT */
@@ -396,34 +396,31 @@ footer small {
 	text-align: center;
 	min-height: 100%;
 	width: 80%;
-	background: #dadada;
 	box-shadow: inset 10px 0px 5px -10px rgba(0,0,0,0.8);
-	/*
-	background: url('../img/background.png') no-repeat center fixed;
-	background-size: cover;
-	*/
 }
 
 .rightContent ul {
 	margin: 0 0 2% 0;
-	width: 180px;
+	min-width: 180px;
+	width: 19%;
 	display: inline-block;
 	vertical-align: top;
 }
 
 .rightContent ul li:nth-child(1) {
+	height: 50px;
 	font-size: 1.5em;
 	font-weight: 100;
 	text-align: center;
-	line-height: 135px;
+	line-height: 90px;
 	text-transform: uppercase;
 	background: none;
 	box-shadow: inherit;
 }
 
 .rightContent ul li {
-	height: 70px;
-	margin: 10px 5px;
+	height: 6vw;
+	margin: 5% 5%;
 	border-radius: 3px;
 	background: rgba(255,255,255,0.3);
 	box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
@@ -440,11 +437,13 @@ footer small {
 	font-weight: 300;
 	background: #fff;
 	cursor: pointer;
+	z-index: 9999;
 	background: linear-gradient(to right, #0097bd 15px,#fff 15px);
-	box-shadow: 0px 3px 0px #015368;
-	border-bottom-right-radius: 0px;
+/*	box-shadow: 0px 3px 0px #015368;
+	border-bottom-right-radius: 0px;*/
 }	
 
+/*
 	.rightContent .active:after {
 		position: absolute;
 		bottom: -3px;
@@ -462,10 +461,10 @@ footer small {
 		content: '';
 		display: block;
 		height: 3px;
-		width: 155px;
+		min-width: 92%;
   	  	background: #ededed;
   	  	border-bottom-right-radius: 0px;
-	}
+	}*/
 
 
 /*	
@@ -495,9 +494,9 @@ footer small {
 	}
 */
 
-.rightContent li.active .info {
-	display: block;
-	height: 40px;
+.rightContent li.active time:nth-of-type(2) {
+	position: absolute;
+	bottom: 0;
 }
 
 .rightContent li.active h3 {

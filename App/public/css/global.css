@@ -465,34 +465,6 @@ footer small {
   	  	border-bottom-right-radius: 0px;
 	}
 
-
-/*	
-	.rightContent .active:before {
-		position: absolute;
-		top: 0;
-		left: 0;
-		content: '';
-		display: block;
-		height: 100%;
-		width: 15px;
-		background: #0097bd;
-		border-top-left-radius: 3px;
-	}
-
-	.rightContent .active:after {
-		position: absolute;
-		bottom: -3px;
-		left: 2px;
-		content: '';
-		display: block;
-		height: 3px;
-		width: 98%;
-	    background: linear-gradient(to right, #015368 15px,#dedede 15px);
-	    box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
-		-webkit-transform: skewX(45deg);	
-	}
-*/
-
 .rightContent li.active .info {
 	display: block;
 	height: 40px;
