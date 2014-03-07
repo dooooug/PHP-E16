@@ -1,0 +1,34 @@
+<?php 
+  $times = array('day', 'm1', 'm2', 's1', 's2');
+  $days = array('Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi');
+  $i = 0;
+  $y = 0;
+  $programToDisplay = array();
+  $newProgram = array();
+  foreach($program as $day) {
+    $i = 0;
+    foreach($day as $time) {
+      if( isset($time['G1']) || isset($time['G2']) ) {
+        if($group == 1) {
+          if(isset($time['G1']))
+            $programToDisplay[$days[$y]][$times[$i]]['G1'] = $time['G1'];
+          else
+            $programToDisplay[$days[$y]][$times[$i]]['G1'] = array();
+        }
+        elseif($group == 2) {
+          if(isset($time['G2']))
+            $programToDisplay[$days[$y]][$times[$i]]['G2'] = $time['G2'];
+          else
+            $programToDisplay[$days[$y]][$times[$i]]['G2'] = array();
+        }
+      }
+      else {
+        
+      }
+      $i++;
+      $programToDisplay[$days[$y]]['day'] = $day['day'];
+    }
+    $y++;
+  }
+  print_r(json_encode($programToDisplay));  
+?>
